@@ -1,1 +1,2 @@
-# Wikabedia
+# What's Wikabedia?
+Wikabedia is the worlds number one source of information, this repository contains all the code for the entire website. The website is currently very incomplete, and is not recommended to be used for daily use.
