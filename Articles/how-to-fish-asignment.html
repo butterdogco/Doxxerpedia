@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>how to fish asignment - Wikabedia</title>
+    <link rel="shortcut icon" href="https://github.com/butterdogco/Wikabedia/blob/main/img/wikabedia.png?raw=true">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+      @keyframes item {
+        0% {
+          margin-left: 0;
+          opacity: 0;
+        }
+        100% {
+          margin-left: 2vh;
+          opacity: 1;
+        }
+      }
+    
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      
+      html {
+        background: white;
+      }
+    
+      body {
+        background: white;
+        font-family: sans-serif;
+        margin: 0;
+        animation: fadeIn 0.2s ease;
+        max-width: 100vw;
+        min-width: 100vw;
+        overflow-x: hidden;
+        transition: 0.2s ease;
+      }
+      
+      h1 {
+        font-size: 4vh;
+        cursor: default;
+      }
+      
+      .logoText {
+        margin-top: -7vh;
+        font-size: 4vh;
+        margin-left: 12vh;
+      }
+      
+      h2 {
+        text-align: center;
+        margin-top: 5vh;
+        font-size: 3vh;
+      }
+      
+      
+      hr {
+        border: 0.1vh solid rgb(230,230,230);
+        margin: 0;
+        width: 100vw;
+        height: 0vh;
+      }
+      
+      .logo {
+        width: 4vh;
+        height: 4vh;
+        margin-left: 2vh;
+        margin-top: 2vh;
+        filter: brightness(95%);
+        border-radius: 100vh;
+        background: white;
+        padding: 2vh;
+        cursor: pointer;
+      }
+      
+      .items, #items, .items2, #items2 {
+        display: inline-flex;
+        flex-wrap: wrap;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        width: 100vw;
+      }
+      
+      .item, #item {
+        animation: item 0.5s ease;
+        width: 27.1vh;
+        height: 24vh;
+        background: rgb(240,240,240);
+        padding: 1.3vh;
+        text-align: center;
+        border-radius: 3vh;
+        font-size: 2vh;
+        transition: 0.2s ease;
+        margin: 2vh;
+        cursor: pointer;
+      }
+      
+      .item:hover {
+        filter: brightness(95%);
+      }
+      
+      .item img {
+        width: 100%;
+        height: 70%;
+        cursor: pointer;
+        border-radius: 2vh;
+      }
+      
+      .item h3 {
+        margin-top: 0.8vh;
+        cursor: pointer;
+      }
+      
+      .item p {
+        color: rgb(160,160,160);
+        margin-top: -1.7vh;
+        cursor: pointer;
+      }
+      
+      .logoDesc, .logoText, .recomend {
+        cursor: default
+      }
+      
+      .logoDesc {
+        color: rgb(190,190,190);
+        text-align: center;
+        font-size: 1.9vh;
+      }
+      
+      .recomend::selection {
+        background: none;
+      }
+      
+      .articleTitle {
+        text-align: center;
+      }
+      
+      .articleText {
+        margin-left: 2vh;
+        height: 70vh;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <img src="https://github.com/butterdogco/Wikabedia/blob/main/img/wikabedia.png?raw=true" class="logo" onclick="site('https://butterdogco.github.io/Wikabedia/')">
+    <h1 class="logoText">wikabedia</h1>
+    <br>
+    <div class="article">
+      <h1 class="articleTitle">how to tyep</h1>
+      <p class="articleText">1. pres buton<br>2. finis!!!</p>
+    </div>
+    <hr>
+    <h2 class="recomend" onclick="load('no don click me','why did you click that','https://butterdogco.github.io/img/favicon.ico','https://google.com');">recomend articles</h2>
+    <div class="items" id="items">
+      
+      <!--
+      <div class="item" id="item" onclick="site('https://google.com')">
+        <img src="https://github.com/butterdogco/Wikabedia/blob/main/img/wikabedia.png?raw=true">
+        <h3>Name</h3>
+        <p>Short description</p>
+      </div>
+      -->
+      
+    </div>
+      
+    <script>
+    
+      function sleep(milliseconds) {
+        const date = Date.now();
+        let currentDate = null;
+        do {
+          currentDate = Date.now();
+        } while (currentDate - date < milliseconds);
+      }
+    
+      function load(head,text,image,url,e) {
+        web = "site('" + url + "')"
+        const div = document.createElement('div');
+        const img = document.createElement('img');
+        const hding = document.createElement('h3');
+        const p = document.createElement('p');
+        div.setAttribute('class','item');
+        div.setAttribute('onclick',web)
+        img.setAttribute('src',image)
+        hding.innerHTML = head;
+        p.innerHTML = text;
+        if(e == null) {
+          e = "items"
+        }
+        document.getElementById(e).appendChild(div)
+        div.appendChild(img);
+        div.appendChild(hding);
+        div.appendChild(p);
+      }
+      
+      function site(url) {
+        document.body.style.opacity = 0;
+        setTimeout(function() {
+        window.location.href = url
+        },250)
+      }
+      
+      
+      window.onerror = function(error) {
+        // do something clever here
+        alert("We've ran into a problem, please report the following text on the GitHub page: " + error); // do NOT do this for real!
+      };
+      
+      function createDefaults() {
+        load("wrld histry","te worlds histry","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd2Ij7KjvrPgVcwQtWaCp-fRRFNobM2g-lJsvvURzAupsr7bgLRtSe8JzpWzm-DO6z0mE:https://images.pexels.com/photos/87651/earth-blue-planet-globe-planet-87651.jpeg%3Fcs%3Dsrgb%26dl%3Dpexels-pixabay-87651.jpg%26fm%3Djpg&usqp=CAU","https://butterdogco.github.io/Wikabedia/Articles/wrld-histry","items")
+        load("how to read","tutorial on how to read","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeYZFejFu5vs5a-_LlNGLcEoTgBUdno95FEZmvLojWEhBtdsibAjb-JwLN3KrwiWzzBNw:https://media.gettyimages.com/id/157482029/photo/stack-of-books.jpg%3Fs%3D612x612%26w%3Dgi%26k%3D20%26c%3D_Yaofm8sZLZkKs1eMkv-zhk8K4k5u0g0fJuQrReWfdQ%3D&usqp=CAU","https://butterdogco.github.io/Wikabedia/Articles/how-to-read","items")
+        load("how fish asigments erly","help to finsh asignment erly","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq5vOXKqy8MfoSJimIpXcixU4pkVzfOlDzDlguT2Wk-AjPwgWY6sxWyBEfPNDRLQxEYkc:https://media.istockphoto.com/id/152021892/photo/teen-doing-homework.jpg%3Fs%3D612x612%26w%3Dis%26k%3D20%26c%3D7pvEU-6FiurfMo997LiNmKS_qbLP--Kp_yevneXfpek%3D&usqp=CAU","https://butterdogco.github.io/Wikabedia/Articles/how-to-fish-asignment/","items")
+      }
+      
+      setTimeout(createDefaults, 100)
+      
+    </script>
+  </body>
+</html>
