@@ -159,3 +159,34 @@
     left: 46%;
     transform: translate(-50%,-50%);
   }
+  
+  footer {
+    text-align: center;
+    margin-top: 2vh;
+  }
+  
+  footer a {
+    padding: 1vh;
+    width: 4vh;
+    height: 2vh;
+    background: rgba(230,230,230);
+    border-radius: 1.25vh;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+  
+  footer a:hover {
+    filter: brightness(95%);
+    box-shadow: 0px 0px 2vh rgba(0,0,0,0.1);
+  }
+  
+  footer .not-a-button {
+    background: none !important;
+    cursor: default;
+  }
+  
+  footer .not-a-button:hover {
+    box-shadow: none;
+  }

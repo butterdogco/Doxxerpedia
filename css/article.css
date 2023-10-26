@@ -153,3 +153,9 @@
   p {
     cursor: default;
   }
+  
+  .articleWriter {
+    cursor: default;
+    color: rgb(160,160,160);
+    text-align: center;
+  }

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Testing Page</title>
+    <style>
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      
+      * {
+        font-family: inherit;
+      }
+      
+      body {
+        font-family: Sans-Serif;
+      }
+      
+      .loading-icon {
+        width: 5vh;
+        height: 5vh;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+      }
+      
+      .loading-spinner {
+        border: 16px solid #f3f3f3; /* Background */
+        border-top: 16px solid rgba(0,0,0,0.5); /* Bar color */
+        border-radius: 50%;
+        width: 10vh;
+        height: 10vh;
+        animation: spin 1.5s ease-in-out infinite;
+        position: fixed;
+        top: 43.5%;
+        left: 46%;
+        transform: translate(-50%,-50%);
+      }
+      
+    </style>
+  </head>
+  <body>
+    <img src="img/wikabedia.png" class="loading-icon">
+    <div class="loading-spinner"></div>
+  </body>
+</html>
