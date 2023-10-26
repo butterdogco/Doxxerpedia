@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>how to tyep - Wikabedia</title>
+    <title>how to tyep - wikabedia</title>
     <link rel="shortcut icon" href="https://github.com/butterdogco/Wikabedia/blob/main/img/wikabedia.png?raw=true">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../css/article.css">
   </head>
   <body>
-    <img src="https://github.com/butterdogco/Wikabedia/blob/main/img/wikabedia.png?raw=true" class="logo" onclick="site('https://butterdogco.github.io/Wikabedia/')">
+    <img src="https://github.com/butterdogco/Wikabedia/blob/main/img/wikabedia.png?raw=true" class="logo" onclick="site('../index.html')">
     <h1 class="logoText">wikabedia</h1>
     <br>
     <div class="article">
@@ -18,8 +18,8 @@
       <p class="articleText">1. pres buton<br>2. finis!!!</p>
     </div>
     <hr>
-    <h2 class="recomend" onclick="load('no don click me','why did you click that','https://butterdogco.github.io/img/favicon.ico','https://google.com');">recomend articles</h2>
-    <div class="items" id="items">
+    <h2 class="recomend" onclick="load('no don click me','why did you click that','../img/wikabedia.png','#','recomend');">recomend articles</h2>
+    <div class="items" id="recomend">
       
       <!--
       <div class="item" id="item" onclick="site('https://google.com')">
@@ -31,60 +31,14 @@
       
     </div>
       
+    <script src="../js/articlesDir.js"></script>
+    <script src="../js/article.js"></script>
     <script>
-    
-      function sleep(milliseconds) {
-        const date = Date.now();
-        let currentDate = null;
-        do {
-          currentDate = Date.now();
-        } while (currentDate - date < milliseconds);
-      }
-    
-      function load(head,text,image,url,e) {
-        web = "site('" + url + "')"
-        const div = document.createElement('div');
-        const img = document.createElement('img');
-        const hding = document.createElement('h3');
-        const p = document.createElement('p');
-        div.setAttribute('class','item');
-        div.setAttribute('onclick',web)
-        img.setAttribute('src',image)
-        hding.innerHTML = head;
-        p.innerHTML = text;
-        if(e == null) {
-          e = "items"
-        }
-        document.getElementById(e).appendChild(div)
-        div.appendChild(img);
-        div.appendChild(hding);
-        div.appendChild(p);
-      }
-      
-      function site(url) {
-        document.body.style.opacity = 0;
-        setTimeout(function() {
-        window.location.href = url
-        },250)
-      }
-      
-      
       window.onerror = function(error) {
         // do something clever here
         alert("We've ran into a problem, please report the following text on the GitHub page: " + error); // do NOT do this for real!
       };
-      
-      function createDefaults() {
-        load("wrld histry","te worlds histry","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd2Ij7KjvrPgVcwQtWaCp-fRRFNobM2g-lJsvvURzAupsr7bgLRtSe8JzpWzm-DO6z0mE:https://images.pexels.com/photos/87651/earth-blue-planet-globe-planet-87651.jpeg%3Fcs%3Dsrgb%26dl%3Dpexels-pixabay-87651.jpg%26fm%3Djpg&usqp=CAU","https://butterdogco.github.io/Wikabedia/Articles/wrld-histry","items")
-        load("how to read","tutorial on how to read","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeYZFejFu5vs5a-_LlNGLcEoTgBUdno95FEZmvLojWEhBtdsibAjb-JwLN3KrwiWzzBNw:https://media.gettyimages.com/id/157482029/photo/stack-of-books.jpg%3Fs%3D612x612%26w%3Dgi%26k%3D20%26c%3D_Yaofm8sZLZkKs1eMkv-zhk8K4k5u0g0fJuQrReWfdQ%3D&usqp=CAU","https://butterdogco.github.io/Wikabedia/Articles/how-to-read","items")
-        load("how fish asigments erly","help to finsh asignment erly","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq5vOXKqy8MfoSJimIpXcixU4pkVzfOlDzDlguT2Wk-AjPwgWY6sxWyBEfPNDRLQxEYkc:https://media.istockphoto.com/id/152021892/photo/teen-doing-homework.jpg%3Fs%3D612x612%26w%3Dis%26k%3D20%26c%3D7pvEU-6FiurfMo997LiNmKS_qbLP--Kp_yevneXfpek%3D&usqp=CAU","https://butterdogco.github.io/Wikabedia/Articles/how-to-fish-asignment","items")
-        load("whats the date","the date","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZHqUxBcHKwUAxFdQc6yptic4wuqfwgqyPqxD1gOz2IiWOQb6jfHupOATEwCsKf3kVw6c:https://media.istockphoto.com/id/1369226981/photo/standing-desk-calendar-september-2022-green.jpg%3Fs%3D612x612%26w%3D0%26k%3D20%26c%3DkLCirEzf6XyKk5e2zqu-6Hdiowf0mEgp-Q4pB37_zD8%3D&usqp=CAU","https://butterdogco.github.io/Wikabedia/Articles/whats-the-date","items")
-        load("how eat eggplant","lern to eat superfast","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLGgzugoEJHclOB608wrU3EK5K8Qg7qlcmmb-O0QmDa2CQ2qNve0BvUHxp8VR3H9CzH_U:https://thumbs.dreamstime.com/z/fresh-eggplant-plate-fork-knife-d-rendering-fresh-eggplant-plate-fork-knife-d-rendering-isolated-white-161715646.jpg&usqp=CAU","https://butterdogco.github.io/Wikabedia/Articles/how-to-eat-eggplant","items")
-        load("how see","how light work","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIAAx0Hhxeol5uCrtrFJYABHB3GhnSSx99EGhJXtMQ9zLoSgt-0B47cRSNQwKTw9joNHU:https://images.unsplash.com/photo-1552862750-746b8f6f7f25%3Fixlib%3Drb-4.0.3%26ixid%3DM3wxMjA3fDB8MHxzZWFyY2h8M3x8bGlnaHRidWxifGVufDB8fDB8fHww%26w%3D1000%26q%3D80&usqp=CAU","https://butterdogco.github.io/Wikabedia/Articles/how-see.html","items")
-      }
-      
-      setTimeout(createDefaults, 100)
-      
     </script>
+    <script src="../js/recomend.js"></script>
   </body>
 </html>

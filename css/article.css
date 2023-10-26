@@ -37,6 +37,7 @@
     font-size: 4vh;
     cursor: default;
     font-weight: 400px;
+    cursor: default;
   }
   
   .logoText {
@@ -50,6 +51,7 @@
     margin-top: 5vh;
     font-size: 3vh;
     font-weight: bold;
+    cursor: default;
   }
   
   
@@ -137,4 +139,17 @@
   .articleText {
     margin-left: 2vh;
     height: 70vh;
+  }
+  
+  #pageName {
+    display: none;
+  }
+  
+  pre {
+    font-family: inherit;
+    cursor: default;
+  }
+  
+  p {
+    cursor: default;
   }
