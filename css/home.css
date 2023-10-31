@@ -23,6 +23,10 @@
     100% { transform: rotate(360deg); }
   }
   
+  * {
+    font-family: inherit;
+  }
+  
   html {
     background: white;
   }
@@ -189,4 +193,50 @@
   
   footer .not-a-button:hover {
     box-shadow: none;
+  }
+  
+  .search {
+    padding: 2vh;
+    border-radius: 5vh;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    width: 2.5vh;
+    height: 2.5vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 2vh;
+    background: rgb(240,240,240);
+    overflow-x: hidden;
+    transition: 0.3s ease;
+  }
+  
+  .search:hover {
+    width: 20vh;
+  }
+  
+  .search:hover input {
+    opacity: 1;
+  }
+  
+  .search input {
+    width: 15vh;
+    height: 2.5vh;
+    margin-top: -1vh;
+    margin-left: -.75vh;
+    position: fixed;
+    padding: 1vh;
+    border-radius: 4vh;
+    outline: none;
+    border: none;
+    opacity: 0;
+    transition: 0.3s ease;
+  }
+  
+  .search img {
+    width: 2.5vh;
+    height: 2.5vh;
+    float: right;
+    cursor: pointer;
   }

@@ -38,3 +38,13 @@ function site(url) {
   window.location.href = url
   },250)
 }
+
+function search() {
+  url = "search.html?search=" + document.getElementById('searchBox').value;
+  if (url !== undefined) {
+    document.body.style.opacity = 0;
+    setTimeout(function() {
+    window.location.href = url
+    },250)
+  }
+}
