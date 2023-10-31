@@ -129,4 +129,12 @@ const data = [
     place: "items",
     tags: "i don no idk i don't know dont confused random potato"
   },
+  {
+    title: "E", // 17
+    desc: "'E'",
+    image: "img/kai-e.jpg",
+    link: "Articles/kai-e.html",
+    place: "items",
+    tags: "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE"
+  },
 ];
