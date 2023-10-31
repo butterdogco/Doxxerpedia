@@ -48,3 +48,9 @@ function search() {
     },250)
   }
 }
+
+function search2(key) {
+  if (event.key === "Enter") {
+    search();
+  }
+}

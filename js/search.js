@@ -45,7 +45,6 @@ function search(mode) {
   
   // Get the URL of the current page
   var url = new URL(window.location);
-
   // Get the search query parameter from the URL
   if (mode === "load") {
     var searchQuery = url.searchParams.get("search");
@@ -60,6 +59,11 @@ function search(mode) {
       }
     }
   }
+  
+  if (url.searchParams.get("search") === "undefined") {
+    var searchQuery = ' ';
+  }
+  
 
   // Perform the search operation if a search query exists
   if (searchQuery) {

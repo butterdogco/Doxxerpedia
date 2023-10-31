@@ -45,3 +45,38 @@ function site(url) {
   window.location.href = url;
   },250);
 }
+
+function createSearch() {
+  const d = document.createElement('div');
+  d.setAttribute('class','search');
+  document.body.appendChild(d);
+  
+  const i = document.createElement('img');
+  i.setAttribute('src','../img/search.png');
+  i.setAttribute('onclick','search("page2");');
+  d.appendChild(i)
+  
+  const t = document.createElement('input');
+  i.setAttribute('type','text');
+  i.setAttribute('placeholder','saerch for somting');
+  // i.setAttribute('id','searchBox');
+  i.id = 'searchBox';
+  d.appendChild(t);
+  
+  // const s = document.createElement('script');
+  // // s.setAttribute('src','../js/search.js');
+  // s.src = '../js/searchCorner.js';
+  // document.body.appendChild(s);
+}
+
+createSearch();
+
+function search() {
+  url = "../search.html?search=" + document.getElementById('searchBox').value;
+  if (url !== undefined) {
+    document.body.style.opacity = 0;
+    setTimeout(function() {
+    window.location.href = url
+    },250)
+  }
+}
