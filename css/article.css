@@ -18,6 +18,30 @@
     }
   }
   
+  @keyframes fadeIn2 {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes fadeIn3 {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
   html {
     background: white;
   }
@@ -72,6 +96,32 @@
     background: white;
     padding: 2vh;
     cursor: pointer;
+    animation: fadeIn3 4s ease-in-out;
+    animation-iteration-count: 9999999;
+    animation-direction: reverse;
+  }
+  
+  .logo2 {
+    opacity: 0;
+    width: 4vh;
+    height: 4vh;
+    margin-left: -8.5vh;
+    margin-top: 2vh;
+    filter: brightness(95%);
+    border-radius: 100vh;
+    background: white;
+    padding: 2vh;
+    cursor: pointer;
+    position: static;
+    z-index: 1;
+    transition: 0.2s ease;
+    animation: fadeIn2 4s ease-in-out;
+    animation-iteration-count: 999999;
+  }
+  
+  .logo:hover ~ .logo2, .logo2:hover {
+    opacity: 1;
+    animation: none;
   }
   
   .items, #items, .items2, #items2 {
@@ -177,6 +227,7 @@
     background: rgb(240,240,240);
     overflow-x: hidden;
     transition: 0.3s ease;
+    box-shadow: 0px 0px 2vh rgba(0,0,0,0.075);
   }
   
   .search:hover {

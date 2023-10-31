@@ -25,6 +25,7 @@
   
   * {
     font-family: inherit;
+    color: inherit;
   }
   
   html {
@@ -76,6 +77,10 @@
     border-radius: 100vh;
     background: white;
     padding: 2vh;
+  }
+  
+  .logo2 {
+    display: none;
   }
   
   .items, #items, .items2, #items2 {
@@ -210,6 +215,8 @@
     background: rgb(240,240,240);
     overflow-x: hidden;
     transition: 0.3s ease;
+    z-index: 2;
+    box-shadow: 0px 0px 2vh rgba(0,0,0,0.075);
   }
   
   .search:hover {
