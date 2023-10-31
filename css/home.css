@@ -4,7 +4,7 @@
       opacity: 0;
     }
     100% {
-      margin-left: 2vh;
+      margin-left: 1.15vw;
       opacity: 1;
     }
   }
@@ -94,14 +94,14 @@
   .item, #item {
     animation: item 0.5s ease;
     width: 16.1vw;
-    height: 24vh;
+    height: 15vw;
     background: rgb(240,240,240);
-    padding: 1.3vh;
+    padding: 0.8vw;
     text-align: center;
     border-radius: 3vh;
-    font-size: 2vh;
+    font-size: 1.15vw;
     transition: 0.2s ease;
-    margin: 2vh;
+    margin: 1.15vw;
     cursor: pointer;
     box-shadow: 0px 0px 2vh rgba(0,0,0,0.05);
   }
