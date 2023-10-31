@@ -1,4 +1,4 @@
-// This is the directory of every article in Wikabedia, every article has an ID (the number it is down the list)
+// This is the directory of every article in Wikabedia, every article has an ID (the number it is down the list + 1)
 
 const data = [
   {
@@ -7,7 +7,7 @@ const data = [
     image: "img/wrld-histry.jpeg",
     link: "Articles/wrld-histry.html",
     place: "items",
-    tags: "world wrld wold history histry histoy 2023 2021 2020 19 18 16 15 14"
+    tags: "world wrld wold history histry histoy 2023 2021 2020 19 18 16 15 14 earth erth eath eart"
   },
   {
     title: "how to read engis", // 2
@@ -39,7 +39,7 @@ const data = [
     image: "img/whats-the-date.jpeg",
     link: "Articles/whats-the-date.html",
     place: "items",
-    tags: "date time daet tiem calender calendar what's ical"
+    tags: "date time daet tiem calender calendar what's ical what's the date what's the daet"
   },
   {
     title: "how eat eggplant", // 6
@@ -87,7 +87,7 @@ const data = [
     image: "img/how-to-be-human.jpg",
     link: "Articles/how-to-be-human.html",
     place: "items",
-    tags: "human dog animal mammal"
+    tags: "human dog animal mammal pet person humanoid"
   },
   {
     title: "how to do maht", // 12
@@ -95,7 +95,7 @@ const data = [
     image: "img/how-to-do-math.jpg",
     link: "Articles/how-to-math-do.html",
     place: "items",
-    tags: "math algebra sin cos tan calculator"
+    tags: "math algebra sin cos tan calculator maht meth"
   },
   {
     title: "trens", // 13
@@ -103,7 +103,7 @@ const data = [
     image: "img/noah-trens.png",
     link: "Articles/noah-trens.html",
     place: "items",
-    tags: "train"
+    tags: "train whistle choo choo train"
   },
   {
     title: "da buterdog", // 14

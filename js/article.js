@@ -57,10 +57,14 @@ function createSearch() {
   d.appendChild(i)
   
   const t = document.createElement('input');
-  i.setAttribute('type','text');
-  i.setAttribute('placeholder','saerch for somting');
-  // i.setAttribute('id','searchBox');
-  i.id = 'searchBox';
+  t.setAttribute('type','text');
+  t.setAttribute('placeholder','search for something');
+  t.id = 'searchBox';
+  t.onkeypress = function(event) {
+    if (event.key === 'Enter') {
+      search("page2");
+    }
+  };
   d.appendChild(t);
   
   // const s = document.createElement('script');
@@ -76,7 +80,13 @@ function search() {
   if (url !== undefined) {
     document.body.style.opacity = 0;
     setTimeout(function() {
-    window.location.href = url
-    },250)
+      window.location.href = url;
+    }, 250);
+  }
+}
+
+function search2(key) {
+  if (event.key === "Enter") {
+    search("page2");
   }
 }
