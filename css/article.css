@@ -84,7 +84,7 @@
   
   .item, #item {
     animation: item 0.5s ease;
-    width: 27.1vh;
+    width: 16.1vw;
     height: 24vh;
     background: rgb(240,240,240);
     padding: 1.3vh;
