@@ -7,7 +7,8 @@ const data = [
     image: "img/wrld-histry.jpeg",
     link: "Articles/wrld-histry.html",
     place: "items",
-    tags: "world wrld wold history histry histoy 2023 2021 2020 19 18 16 15 14 earth erth eath eart"
+    tags: "world wrld wold history histry histoy 2023 2021 2020 19 18 16 15 14 earth erth eath eart",
+    text: "yeer is 2023. peeple did tings!"
   },
   {
     title: "how to read engis", // 2
@@ -15,7 +16,8 @@ const data = [
     image: "img/how-to-read.jpeg",
     link: "Articles/how-to-read.html",
     place: "items",
-    tags: "read english red read raed rad engis englis englih language anguage"
+    tags: "read english red read raed rad engis englis englih language anguage",
+    text: "1. read /n 2. finisdhed leson todya!!11"
   },
   {
     title: "how to typ letrs", // 3
@@ -63,7 +65,7 @@ const data = [
     image: "img/creating-a-piep-bom.jpg",
     link: "Articles/Pipe-bomb.html",
     place: "items",
-    tags: "bomb weapon pipe damage tnt explosive"
+    tags: "weapon pipe bomb damage tnt explosive boom"
   },
   {
     title: "hiding evidence", // 9
@@ -108,7 +110,7 @@ const data = [
   {
     title: "da buterdog", // 14
     desc: "the ceo",
-    image: "img/butterdog.ico",
+    image: "img/butterdog.jpg",
     link: "Articles/nolan-da-buterdog.html",
     place: "items",
     tags: "ceo butterdog buterdog "
@@ -116,7 +118,7 @@ const data = [
   {
     title: "wat da dog", // 15
     desc: "wof oof",
-    image: "img/butterdog.ico",
+    image: "img/wat-da-dog.jpg",
     link: "Articles/wat-da-dog.html",
     place: "items",
     tags: "dog woof bark doggy doggie"
@@ -135,6 +137,54 @@ const data = [
     image: "img/kai-e.jpg",
     link: "Articles/kai-e.html",
     place: "items",
-    tags: "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE"
+    tags: "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE 'e' letter leter alphabet abc's abcs abcdefghijklmnopqrstuvwxyz"
+  },
+  {
+    title: "us histrey", // 18
+    desc: "ameica",
+    image: "img/us-history.jpg",
+    link: "Articles/us-histrey.html",
+    place: "items",
+    tags: "us united states of america american fat burger cheese sodium fat man fat people truck f150 ford falcon history histrey histoy fat men pollution gun pew pew weapons pistol assualt rifle shotgun glock 19 glock 17 ar 15 ar15 non-free healthcare food drugs death killing school shootings bacon unhealthy racism black white supremacy joe biden donald trump donald dump fatass rootbeer root beer coke coca-cola coca cola polar destroyer icecap melter ice cap melter earth heater global warming guns military tanks abrams shit drivers culture assholes 'merica 'merican blackface start of racism creator racism inventor"
+  },
+  {
+    title: "how 2 maek mony", // 19
+    desc: "b ritch",
+    image: "img/nolan-b-ritch.jpg",
+    link: "Articles/nolan-b-ritch.html",
+    place: "items",
+    tags: "money cash how to be rich bank of america"
+  },
+    {
+    title: "top 5 positions", // 20
+    desc: "like and sub",
+    image: "img/nolan-top-5-positions.png",
+    link: "Articles/nolan-top-5-positions.html",
+    place: "items",
+    tags: "sit down sitting down seating chair positions"
+  },
+  {
+    title: "How 2 Invest", // 21
+    desc: "Get ritch",
+    image: "img/nolan-how-2-invest.jpg",
+    link: "Articles/nolan-how-2-invest.html",
+    place: "items",
+    tags: "invest money rich ritch investing money cash dollar $"
+  },
+  {
+    title: "wrld histry 2: rematserd", // 22
+    desc: "new version",
+    image: "img/nolan-world-history-2.jpeg",
+    link: "Articles/nolan-world-history-2.html",
+    place: "items",
+    tags: "world history earth lore world lore"
+  },
+  {
+    title: "Your answer", // 23
+    desc: "Your answer",
+    image: "img/nolan-your-answer.png",
+    link: "Articles/nolan-your-answer.html",
+    place: "items",
+    tags: "your answer useless article"
   },
 ];

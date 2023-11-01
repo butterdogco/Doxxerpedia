@@ -68,6 +68,7 @@
     margin-top: -7vh;
     font-size: 4vh;
     margin-left: 12vh;
+    display: none;
   }
   
   h2 {
@@ -81,7 +82,7 @@
   
   hr {
     border: 0.1vh solid rgb(230,230,230);
-    margin: 0;
+    /*margin-top: 85vh;*/
     width: 100vw;
     height: 0vh;
   }
@@ -99,6 +100,8 @@
     animation: fadeIn3 4s ease-in-out;
     animation-iteration-count: 9999999;
     animation-direction: reverse;
+    z-index: 5;
+    position: relative;
   }
   
   .logo2 {
@@ -117,6 +120,8 @@
     transition: 0.2s ease;
     animation: fadeIn2 4s ease-in-out;
     animation-iteration-count: 999999;
+    z-index: 6;
+    position: relative;
   }
   
   .logo:hover ~ .logo2, .logo2:hover {
@@ -124,22 +129,25 @@
     animation: none;
   }
   
-  .items, #items, .items2, #items2 {
+  .items, #items {
     display: inline-flex;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
     margin-left: 50%;
     transform: translateX(-50%);
-    width: 100vw;
+    height: 33vh;
+    max-width: 100vw;
+    overflow-x: auto;
   }
   
   .item, #item {
     animation: item 0.5s ease;
-    width: 16.1vw;
+    min-width: 16.1vw;
     height: 15vw;
+    min-height: 200px;
     background: rgb(240,240,240);
     padding: 0.8vw;
     text-align: center;
-    border-radius: 3vh;
+    border-radius: 1.5vw;
     font-size: 1.15vw;
     transition: 0.2s ease;
     margin: 1.15vw;
@@ -184,13 +192,46 @@
     background: none;
   }
   
+  .articleImage {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .articleImage::after {
+    content: "";
+    position: absolute;
+    top: -14vh;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 20%, rgba(255,255,255,0.6206524846266632) 100%);
+    pointer-events: none;
+  }
+  
   .articleTitle {
     text-align: center;
+    z-index: 1;
+    position: absolute;
+    top: 15vh;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .articleImage img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: fill;
+    margin-top: -14vh;
+    z-index: 0;
+    
   }
   
   .articleText {
     margin-left: 2vh;
     height: 70vh;
+    z-index: 1;
+    position: absolute;
+    top: 30vh;
   }
   
   #pageName {
