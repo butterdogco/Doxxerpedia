@@ -203,6 +203,81 @@ const data = [
     place: "items",
     tags: "idk alexis"
   },
+  {
+    title: "corona virus", // 26
+    desc: "aka covid-19",
+    image: "img/nolan-covid.jpeg",
+    link: "Articles/nolan-covid.html",
+    place: "items",
+    tags: "corona virus covid-19 covid 19 pandemic world lockdown"
+  },
+  {
+    title: "Southridge High School", // 27
+    desc: "beaverton OR",
+    image: "img/nolan-the-ridge.jpeg",
+    link: "Articles/nolan-shs.html",
+    place: "items",
+    tags: "school southridge beaverton school district admin oregon united states of america high school public school"
+  },
+  {
+    title: "World Trade Center", // 28
+    desc: "i forgot",
+    image: "img/nolan-wtc.jpeg",
+    link: "Articles/nolan-wtc.html",
+    place: "items",
+    tags: "american explosion wtc world trade center 9/11 united states of america",
+    text: "1. built along tim ago<br>2. demolished in 2001 without a permit<br>3. every1 sad or somthing",
+    writer: "Osama",
+    artName: "World Trade Center"
+  },
+  {
+    title: "doors rblx", // 29
+    desc: "funny",
+    image: "img/nolan-doors.jpeg",
+    link: "Articles/nolan-doors.html",
+    place: "items",
+    tags: "doors roblox doors game gaming this looks like gaming area"
+  },
+  {
+    title: "seamen", // 30 eeeeeeeeeeeeeeeeeeeeeeeeeee
+    desc: "aka sailors",
+    image: "img/nolan-seamen.jpeg",
+    link: "Articles/nolan-seamen.html",
+    place: "items",
+    tags: "seamen semen sea ocean water earth h2o h20"
+  },
+    {
+    title: "carrot", // 31
+    desc: "carrot",
+    image: "img/nolan-carrot.png",
+    link: "Articles/nolan-carrot.html",
+    place: "items",
+    tags: "food carrot vegetable fruit"
+  },
+  {
+    title: "Ford F150", // 32
+    desc: "best car",
+    image: "img/nolan-f150.jpeg",
+    link: "Articles/nolan-f150.html",
+    place: "items",
+    tags: "america fat man car pickup truck racist polar destroyer"
+  },
+  {
+    title: "how to drive", // 33
+    desc: "drive",
+    image: "img/nolan-drive.jpeg",
+    link: "Articles/nolan-drive.html",
+    place: "items",
+    tags: "motor vehicle car driving test drive sedan coupe pickup truck hatchback suv"
+  },
+  {
+    title: "gambling", // 34
+    desc: "zoom",
+    image: "img/nolan-gambling.jpeg",
+    link: "Articles/nolan-gambling.html",
+    place: "items",
+    tags: "doors roblox doors game gaming this looks like gaming area"
+  },
 ];
 
 // function sheetData(c1,c2) {
