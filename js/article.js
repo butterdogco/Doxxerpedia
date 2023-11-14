@@ -49,6 +49,7 @@ function site(url) {
 function createSearch() {
   const d = document.createElement('div');
   d.setAttribute('class','search');
+  d.id = 'searchDiv';
   document.body.appendChild(d);
   
   const i = document.createElement('img');

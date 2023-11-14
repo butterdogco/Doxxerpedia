@@ -7,7 +7,7 @@ const data = [
     image: "img/wrld-histry.jpeg",
     link: "Articles/wrld-histry.html",
     place: "items",
-    tags: "world wrld wold history histry histoy 2023 2021 2020 19 18 16 15 14 earth erth eath eart keegan",
+    tags: "world history histry histoy 2023 2021 2020 19 18 16 15 14 earth erth eath eart keegan",
     text: "yeer is 2023. peeple did tings!"
   },
   {
@@ -16,7 +16,7 @@ const data = [
     image: "img/how-to-read.jpeg",
     link: "Articles/how-to-read.html",
     place: "items",
-    tags: "read english red read raed rad engis englis englih language anguage keegan",
+    tags: "how to read english read english red read raed rad engis englis englih language anguage keegan",
     text: "1. read /n 2. finisdhed leson todya!!11"
   },
   {
@@ -25,7 +25,7 @@ const data = [
     image: "img/how-to-type.jpeg",
     link: "Articles/how-to-type.html",
     place: "items",
-    tags: "keyboard keys letters leter letter keybord kebord keboard type typing keegan"
+    tags: "how to type letters keyboard keys letters leter letter keybord kebord keboard type typing keegan"
   },
   {
     title: "how fish asigments erly", // 4
@@ -33,7 +33,7 @@ const data = [
     image: "img/how-to-fish-asigments-erly.jpeg",
     link: "Articles/how-to-fish-asignment.html",
     place: "items",
-    tags: "finish finis finihs assignment asignment work classwork homework quiz quizes tests keegan"
+    tags: "how to finish assignments early finish finis finihs assignment asignment work classwork homework quiz quizes tests keegan"
   },
   {
     title: "whats the date", // 5
@@ -49,7 +49,7 @@ const data = [
     image: "img/how-eat-eggplant.jpeg",
     link: "Articles/how-to-eat-eggplant.html",
     place: "items",
-    tags: "food eggplant eat egplant eggplan egplan eating edible keegan"
+    tags: "how to eat an eggplant how to eat eggplant food eggplant eat egplant eggplan egplan eating edible keegan"
   },
   {
     title: "how see", // 7
@@ -57,7 +57,7 @@ const data = [
     image: "img/how-see.jpeg",
     link: "Articles/how-see.html",
     place: "items",
-    tags: "light physics science see lights bulb electricity keegan"
+    tags: "how to see how light works physics science see lights bulb electricity keegan"
   },
   {
     title: "creating a piep bom", // 8
@@ -65,7 +65,7 @@ const data = [
     image: "img/creating-a-piep-bom.jpg",
     link: "Articles/Pipe-bomb.html",
     place: "items",
-    tags: "weapon pipe bomb damage tnt explosive boom keegan"
+    tags: "how to create a pipe bomb weapon pipe bomb damage tnt explosive boom keegan"
   },
   {
     title: "hiding evidence", // 9
@@ -73,7 +73,7 @@ const data = [
     image: "img/hiding-evidence.jpeg",
     link: "Articles/hide-evidence.html",
     place: "items",
-    tags: "evidence hiding forest legal trouble keegan"
+    tags: "how to hide evidence hiding forest legal trouble keegan"
   },
   {
     title: "how to ge hot", // 10
@@ -81,7 +81,7 @@ const data = [
     image: "img/how-to-get-hot.jpeg",
     link: "Articles/how-to-get-hot.html",
     place: "items",
-    tags: "hot tempurature lava heat keegan"
+    tags: "how to get hot tempurature lava heat keegan"
   },
   {
     title: "how to b humen", // 11
@@ -89,7 +89,7 @@ const data = [
     image: "img/how-to-be-human.jpg",
     link: "Articles/how-to-be-human.html",
     place: "items",
-    tags: "human dog animal mammal pet person humanoid keegan"
+    tags: "how to be human dog animal mammal pet person humanoid keegan"
   },
   {
     title: "how to do maht", // 12
@@ -97,7 +97,7 @@ const data = [
     image: "img/how-to-do-math.jpg",
     link: "Articles/how-to-math-do.html",
     place: "items",
-    tags: "math algebra sin cos tan calculator maht meth keegan"
+    tags: "how to do math algebra sin cos tan calculator maht meth keegan"
   },
   {
     title: "trens", // 13
@@ -105,7 +105,7 @@ const data = [
     image: "img/noah-trens.png",
     link: "Articles/noah-trens.html",
     place: "items",
-    tags: "train whistle choo choo train noah"
+    tags: "train whistle trains choo choo train noah"
   },
   {
     title: "da buterdog", // 14
@@ -113,7 +113,7 @@ const data = [
     image: "img/butterdog.jpg",
     link: "Articles/nolan-da-buterdog.html",
     place: "items",
-    tags: "ceo butterdog buterdog nolan"
+    tags: "the ceo of butterdogco buterdog nolan"
   },
   {
     title: "wat da dog", // 15
@@ -121,7 +121,7 @@ const data = [
     image: "img/wat-da-dog.jpg",
     link: "Articles/wat-da-dog.html",
     place: "items",
-    tags: "dog woof bark doggy doggie keegan"
+    tags: "whats a dog what's a dog woof bark doggy doggie keegan"
   },
   {
     title: "Noe nane givn1!", // 16
@@ -153,7 +153,7 @@ const data = [
     image: "img/nolan-b-ritch.jpg",
     link: "Articles/nolan-b-ritch.html",
     place: "items",
-    tags: "money cash how to be rich bank of america nolan"
+    tags: "money cash be rich bank of america nolan"
   },
     {
     title: "top 5 positions", // 20
@@ -209,7 +209,7 @@ const data = [
     image: "img/nolan-covid.jpeg",
     link: "Articles/nolan-covid.html",
     place: "items",
-    tags: "corona virus covid-19 covid 19 pandemic world lockdown"
+    tags: "corona virus covid-19 covid 19 pandemic world lockdown nolan"
   },
   {
     title: "Southridge High School", // 27
@@ -217,7 +217,7 @@ const data = [
     image: "img/nolan-the-ridge.jpeg",
     link: "Articles/nolan-shs.html",
     place: "items",
-    tags: "school southridge beaverton school district admin oregon united states of america high school public school"
+    tags: "school southridge high school beaverton school district admin oregon united states of american high school public school nolan"
   },
   {
     title: "World Trade Center", // 28
@@ -225,7 +225,7 @@ const data = [
     image: "img/nolan-wtc.jpeg",
     link: "Articles/nolan-wtc.html",
     place: "items",
-    tags: "american explosion wtc world trade center 9/11 united states of america",
+    tags: "american explosion wtc world trade center 9/11 united states of america osama bin laden nolan",
     text: "1. built along tim ago<br>2. demolished in 2001 without a permit<br>3. every1 sad or somthing",
     writer: "Osama",
     artName: "World Trade Center"
@@ -236,7 +236,7 @@ const data = [
     image: "img/nolan-doors.jpeg",
     link: "Articles/nolan-doors.html",
     place: "items",
-    tags: "doors roblox doors game gaming this looks like gaming area"
+    tags: "doors roblox doors game gaming this looks like gaming area nolan"
   },
   {
     title: "seamen", // 30 eeeeeeeeeeeeeeeeeeeeeeeeeee
@@ -244,7 +244,7 @@ const data = [
     image: "img/nolan-seamen.jpeg",
     link: "Articles/nolan-seamen.html",
     place: "items",
-    tags: "seamen semen sea ocean water earth h2o h20"
+    tags: "seamen semen sea ocean water earth h2o h20 nolan"
   },
     {
     title: "carrot", // 31
@@ -252,7 +252,7 @@ const data = [
     image: "img/nolan-carrot.png",
     link: "Articles/nolan-carrot.html",
     place: "items",
-    tags: "food carrot vegetable fruit"
+    tags: "food carrot vegetable fruit nolan"
   },
   {
     title: "Ford F150", // 32
@@ -260,7 +260,7 @@ const data = [
     image: "img/nolan-f150.jpeg",
     link: "Articles/nolan-f150.html",
     place: "items",
-    tags: "america fat man car pickup truck racist polar destroyer"
+    tags: "america fat man car pickup truck racist polar destroyer nolan"
   },
   {
     title: "how to drive", // 33
@@ -268,7 +268,7 @@ const data = [
     image: "img/nolan-drive.jpeg",
     link: "Articles/nolan-drive.html",
     place: "items",
-    tags: "motor vehicle car driving test drive sedan coupe pickup truck hatchback suv"
+    tags: "motor vehicle car driving test drive sedan coupe pickup truck hatchback suv nolan"
   },
   {
     title: "gambling", // 34
@@ -276,7 +276,63 @@ const data = [
     image: "img/nolan-gambling.jpeg",
     link: "Articles/nolan-gambling.html",
     place: "items",
-    tags: "doors roblox doors game gaming this looks like gaming area"
+    tags: "doors roblox doors game gaming this looks like gaming area nolan"
+  },
+  {
+    title: "how newclr futin", // 35
+    desc: "REAL!?!?!?/1",
+    image: "img/alex-nuclear.webp",
+    link: "Articles/alex-nuclear.html",
+    place: "items",
+    tags: "nuclear fusion tutorial illegal boom alex"
+  },
+  {
+    title: "ram", // 36
+    desc: "built serve",
+    image: "img/nolan-ram.jpg",
+    link: "Articles/nolan-ram.html",
+    place: "items",
+    tags: "ram 1500 american polar destroyer polluter cruiser nolan"
+  },
+  {
+    title: "waze 2 get 2 skool", // 37 continue from here
+    desc: "don go skool",
+    image: "img/nolan-school.jpeg",
+    link: "Articles/nolan-school.html",
+    place: "items",
+    tags: "school beaverton school disctrict transport how to get to school nolan"
+  },
+  {
+    title: "how 2 evade taxes", // 38
+    desc: "serious",
+    image: "img/nolan-evade.jpeg",
+    link: "Articles/nolan-taxes.html",
+    place: "items",
+    tags: "how to evade taxes nolan"
+  },
+  {
+    title: "FORTNITE VICTORY R...", // 39
+    desc: "n0t clikbait",
+    image: "img/nolan-fortnite.jpeg",
+    link: "Articles/nolan-fortnite.html",
+    place: "items",
+    tags: "youtube fortnite battle royale video game #1 victory royale nolan"
+  },
+  {
+    title: "how 2 get XTRA ritch", // 40
+    desc: "$$$$$$$$$$$$",
+    image: "img/nolan-ritch.jpeg",
+    link: "Articles/nolan-ritch.html",
+    place: "items",
+    tags: "how to get rich how to get extra rich nolan"
+  },
+  {
+    title: "earth lore", // 41
+    desc: "histor",
+    image: "img/nolan-earth-lore.webp",
+    link: "Articles/nolan-earth-lore.html",
+    place: "items",
+    tags: "planet earth lore milky way galaxy human nolan"
   },
 ];
 
