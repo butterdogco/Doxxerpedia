@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title id="pageTitle">articleName - wikabedia</title>
+    <link rel="shortcut icon" href="https://github.com/butterdogco/Wikabedia/blob/main/img/wikabedia.png?raw=true">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/article.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <img src="../img/wikabedia.png" class="logo" onclick="site('../index.html')">
+    <img src="../img/back.png" class="logo2" onclick="site('../index.html')">
+    <h1 class="logoText">wikabedia</h1>
+    <br>
+    <div class="article">
+      <div class="articleImage">
+        <img src="../img/wikabedia.png" id="articleImg">
+      </div>
+      <h1 class="articleTitle" id="articleTitle">article</h1>
+      <pre class="articleText" id="articleText">stuff</pre>
+      <p class="articleWriter" id="articleWriter">article by yourMom</p>
+    </div>
+    <hr>
+    <h2 class="recomend" onclick="load('no don click me','why did you click that','../img/wikabedia.png','#','recomend');">recomend articles</h2>
+    <div class="items" id="recomend">
+      
+      <!--
+      <div class="item" id="item" onclick="site('https://google.com')">
+        <img src="https://github.com/butterdogco/Wikabedia/blob/main/img/wikabedia.png?raw=true">
+        <h3>Name</h3>
+        <p>Short description</p>
+      </div>
+      -->
+      
+    </div>
+      
+    <script src="../js/articlesDir.js"></script>
+    <script src="../js/article.js"></script>
+    <script>
+      window.onerror = function(error) {
+        alert("We've ran into a problem, please report the following text on the GitHub page: " + error);
+      };
+      
+      var url = new URL(window.location);
+      const articleNum = url.searchParams.get("article");
+
+      function sheetData(c1, id, mode) {
+        const spreadsheetId = '1LlL8mrSXTTV6qHOkUKd57oVb0uZATq037Wg4ltlDreg';
+        const range = 'Form Responses 2!' + c1; // Specify the sheet name and range
+      
+        fetch(`https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${range}?key=AIzaSyBie4PasgrxYkF7LRl8zcCGUsnBnwZ8pWE`)
+          .then(response => response.json())
+          .then(data => {
+            let val = data.values;
+            if (mode === "image") {
+              try {
+                const imageId = val.toString().replace('https://drive.google.com/open?id=', '');
+                const newImageUrl = `https://drive.google.com/uc?export=view&id=${imageId}`;
+                document.getElementById(id).src = newImageUrl;
+              }
+              catch (err) {
+                console.log(err);
+              }
+            } else if (mode === "title") {
+              document.getElementById(id).innerHTML = val;
+            } else if (mode === "text") {
+              document.getElementById(id).innerHTML = val;
+            } else if (mode === "writer") {
+              document.getElementById(id).innerHTML = ''.concat("article by ",val);
+            } else if (mode === "pageTitle") {
+              document.title = val + " - wikabedia";
+            }
+      
+            return val;
+          });
+      }
+       
+      sheetData("G" + articleNum,"articleTitle","title");
+      sheetData("H" + articleNum,"articleText","text");
+      sheetData("F" + articleNum,"articleImg","image");
+      sheetData("C" + articleNum,"articleWriter","writer");
+      sheetData("G" + articleNum,"","pageTitle");
+      
+      // C = name
+      // D = title
+      // E = desc
+      // F = image
+      // G = articleTitle
+      // H = mainText
+      // I = appropriate or not
+    </script>
+    <script src="../js/recomend.js"></script>
+  </body>
+</html>

@@ -1,5 +1,26 @@
 // This is the directory of every article in Wikabedia, every article has an ID (the number it is down the list + 1)
 
+function getSheetData(c1, c2) {
+  const spreadsheetId = '1LlL8mrSXTTV6qHOkUKd57oVb0uZATq037Wg4ltlDreg';
+  const range = 'Form Responses 2!' + c1; // Specify the sheet name and range
+
+  fetch(`https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${range}?key=AIzaSyBie4PasgrxYkF7LRl8zcCGUsnBnwZ8pWE`)
+    .then(response => response.json())
+    .then(data => {
+      let val = data.values;
+      
+      return val;
+    });
+}
+ 
+ // C = name
+ // D = title
+ // E = desc
+ // F = image
+ // G = articleTitle
+ // H = mainText
+ // I = appropriate or not
+
 const data = [
   {
     title: "wrld histry", // 1
@@ -334,18 +355,30 @@ const data = [
     place: "items",
     tags: "planet earth lore milky way galaxy human nolan"
   },
+  {
+    title: "scartch", // 42
+    desc: "coding lang",
+    image: "img/nolan-scratch.jpeg",
+    link: "Articles/article.html?article=30",
+    place: "items",
+    tags: "scratch.mit.edu coding language man nolan"
+  },
+  {
+    title: "ButterDog CFO", // 43
+    desc: "(2023)",
+    image: "img/nolan-butterdog-cfo.jpeg",
+    link: "Articles/article.html?article=31",
+    place: "items",
+    tags: "butterdogco cfo chief financial officer nolan"
+  },
 ];
 
-// function sheetData(c1,c2) {
-//   const spreadsheetId = '1LlL8mrSXTTV6qHOkUKd57oVb0uZATq037Wg4ltlDreg';
-//   const range = 'wikabedia!' + c1/* + ":" + c2*/; // Specify the sheet name and range
-
-//   fetch(`https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${range}?key=AIzaSyBie4PasgrxYkF7LRl8zcCGUsnBnwZ8pWE`)
-//     .then(response => response.json())
-//     .then(data => {
-//       // Process the data
-//       // alert(data.values);
-//       // document.getElementById("logoText").innerHTML = JSON.stringify(data);
-//       return data.values;
-//     });
-// }
+// A = date made
+// B = email
+// C = name
+// D = title
+// E = desc
+// F = image
+// G = articleTitle
+// H = mainText
+// I = appropriate or not
