@@ -319,7 +319,7 @@ const data = [
     title: "waze 2 get 2 skool", // 37 continue from here
     desc: "don go skool",
     image: "img/nolan-school.jpeg",
-    link: "Articles/nolan-school.html",
+    link: "Articles/article.html?article=25",
     place: "items",
     tags: "school beaverton school disctrict transport how to get to school nolan"
   },
@@ -327,7 +327,7 @@ const data = [
     title: "how 2 evade taxes", // 38
     desc: "serious",
     image: "img/nolan-evade.jpeg",
-    link: "Articles/nolan-taxes.html",
+    link: "Articles/article.html?article=26",
     place: "items",
     tags: "how to evade taxes nolan"
   },
@@ -335,7 +335,7 @@ const data = [
     title: "FORTNITE VICTORY R...", // 39
     desc: "n0t clikbait",
     image: "img/nolan-fortnite.jpeg",
-    link: "Articles/nolan-fortnite.html",
+    link: "Articles/article.html?article=27",
     place: "items",
     tags: "youtube fortnite battle royale video game #1 victory royale nolan"
   },
@@ -343,7 +343,7 @@ const data = [
     title: "how 2 get XTRA ritch", // 40
     desc: "$$$$$$$$$$$$",
     image: "img/nolan-ritch.jpeg",
-    link: "Articles/nolan-ritch.html",
+    link: "Articles/article.html?article=28",
     place: "items",
     tags: "how to get rich how to get extra rich nolan"
   },
@@ -351,7 +351,7 @@ const data = [
     title: "earth lore", // 41
     desc: "histor",
     image: "img/nolan-earth-lore.webp",
-    link: "Articles/nolan-earth-lore.html",
+    link: "Articles/article.html?article=29",
     place: "items",
     tags: "planet earth lore milky way galaxy human nolan"
   },
@@ -371,6 +371,22 @@ const data = [
     place: "items",
     tags: "butterdogco cfo chief financial officer nolan"
   },
+  {
+    title: "Drogco", // 44
+    desc: "dogrog",
+    image: "img/nolan-drogco.png",
+    link: "Articles/article.html?article=32",
+    place: "items",
+    tags: "butterdogco drogco company bankruptcy poor nolan"
+  },
+  {
+    title: "Mountainside High School",
+    desc: "Beaverton OR",
+    image: "img/kai-mountainside.jpeg",
+    link: "Articles/article.html?article=33",
+    place: "items",
+    tags: "beaverton school district mhs southridge high school kai"
+  }
 ];
 
 // A = date made

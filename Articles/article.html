@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title id="pageTitle">articleName - wikabedia</title>
+    <title id="pageTitle">loading - wikabedia</title>
     <link rel="shortcut icon" href="https://github.com/butterdogco/Wikabedia/blob/main/img/wikabedia.png?raw=true">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,6 +11,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
+    <div class="alert" id="alertDiv">
+      <p>tis paeg new and bugy, so report bug if find <a href="https://github.com/butterdogco/Wikabedia/issues/new" target="_blank">here</a>.</p>
+    </div>
     <img src="../img/wikabedia.png" class="logo" onclick="site('../index.html')">
     <img src="../img/back.png" class="logo2" onclick="site('../index.html')">
     <h1 class="logoText">wikabedia</h1>
@@ -19,9 +22,9 @@
       <div class="articleImage">
         <img src="../img/wikabedia.png" id="articleImg">
       </div>
-      <h1 class="articleTitle" id="articleTitle">article</h1>
-      <pre class="articleText" id="articleText">stuff</pre>
-      <p class="articleWriter" id="articleWriter">article by yourMom</p>
+      <h1 class="articleTitle" id="articleTitle">loading</h1>
+      <pre class="articleText" id="articleText">pls wait</pre>
+      <p class="articleWriter" id="articleWriter">article by your mother</p>
     </div>
     <hr>
     <h2 class="recomend" onclick="load('no don click me','why did you click that','../img/wikabedia.png','#','recomend');">recomend articles</h2>
@@ -35,6 +38,10 @@
       </div>
       -->
       
+    </div>
+    <div class="loading" id="loadDiv">
+      <img src="../img/wikabedia.png" class="loading-icon">
+      <div class="loading-spinner"></div>
     </div>
       
     <script src="../js/articlesDir.js"></script>
@@ -83,6 +90,19 @@
       sheetData("F" + articleNum,"articleImg","image");
       sheetData("C" + articleNum,"articleWriter","writer");
       sheetData("G" + articleNum,"","pageTitle");
+      
+      function checkLoad() {
+        if(document.getElementById('articleTitle').innerHTML != "loading" == false) {
+        //if(document.getElementById('articleImg').src != "../img/wikabedia.png" == false) {
+           window.setTimeout(checkLoad, 100);
+        } else {
+          document.getElementById('loadDiv').style.opacity = 0;
+          window.setTimeout(function(){
+            document.getElementById('loadDiv').remove();
+          }, 200);
+        }
+      }
+      checkLoad();
       
       // C = name
       // D = title
