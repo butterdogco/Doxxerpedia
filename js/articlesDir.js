@@ -124,7 +124,7 @@ const data = [
     title: "trens", // 13
     desc: "choo chooooo",
     image: "img/noah-trens.png",
-    link: "Articles/noah-trens.html",
+    link: "Articles/article.html?article=2",
     place: "items",
     tags: "train whistle trains choo choo train noah"
   },
@@ -148,7 +148,7 @@ const data = [
     title: "Noe nane givn1!", // 16
     desc: "tha artical",
     image: "img/kai-I fogot.JPG",
-    link: "Articles/kai-I fogot.html",
+    link: "Articles/article.html?article=4",
     place: "items",
     tags: "i don no idk i don't know dont confused random potato kai"
   },
@@ -156,7 +156,7 @@ const data = [
     title: "E", // 17
     desc: "'E'",
     image: "img/kai-e.jpg",
-    link: "Articles/kai-e.html",
+    link: "Articles/article.html?article=5",
     place: "items",
     tags: "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE 'e' letter leter alphabet abc's abcs abcdefghijklmnopqrstuvwxyz kai"
   },
@@ -164,7 +164,7 @@ const data = [
     title: "us histrey", // 18
     desc: "ameica",
     image: "img/us-history.jpg",
-    link: "Articles/us-histrey.html",
+    link: "Articles/article.html?article=6",
     place: "items",
     tags: "us united states of america american fat burger cheese sodium fat man fat people truck f150 ford falcon history histrey histoy fat men pollution gun pew pew weapons pistol assualt rifle shotgun glock 19 glock 17 ar 15 ar15 non-free healthcare food drugs death killing school shootings bacon unhealthy racism black white supremacy joe biden donald trump donald dump fatass rootbeer root beer coke coca-cola coca cola polar destroyer icecap melter ice cap melter earth heater global warming guns military tanks abrams shit drivers culture assholes 'merica 'merican blackface start of racism creator racism inventor"
   },
@@ -172,7 +172,7 @@ const data = [
     title: "how 2 maek mony", // 19
     desc: "b ritch",
     image: "img/nolan-b-ritch.jpg",
-    link: "Articles/nolan-b-ritch.html",
+    link: "Articles/article.html?article=7",
     place: "items",
     tags: "money cash be rich bank of america nolan"
   },
@@ -180,7 +180,7 @@ const data = [
     title: "top 5 positions", // 20
     desc: "like and sub",
     image: "img/nolan-top-5-positions.png",
-    link: "Articles/nolan-top-5-positions.html",
+    link: "Articles/article.html?article=8",
     place: "items",
     tags: "sit down sitting down seating chair positions nolan"
   },
@@ -188,7 +188,7 @@ const data = [
     title: "How 2 Invest", // 21
     desc: "Get ritch",
     image: "img/nolan-how-2-invest.jpg",
-    link: "Articles/nolan-how-2-invest.html",
+    link: "Articles/article.html?article=9",
     place: "items",
     tags: "invest money rich ritch investing money cash dollar $ nolan"
   },
@@ -196,7 +196,7 @@ const data = [
     title: "wrld histry 2: rematserd", // 22
     desc: "new version",
     image: "img/nolan-world-history-2.jpeg",
-    link: "Articles/nolan-world-history-2.html",
+    link: "Articles/article.html?article=10",
     place: "items",
     tags: "world history earth lore world lore nolan"
   },
@@ -204,7 +204,7 @@ const data = [
     title: "Your answer", // 23
     desc: "Your answer",
     image: "img/nolan-your-answer.png",
-    link: "Articles/nolan-your-answer.html",
+    link: "Articles/article.html?article=11",
     place: "items",
     tags: "your answer useless article nolan"
   },
@@ -212,7 +212,7 @@ const data = [
     title: "How to draw good", // 24
     desc: "how 2 draw",
     image: "img/kai-how-to-draw.PNG",
-    link: "Articles/kai-how-to-draw.html",
+    link: "Articles/article.html?article=12",
     place: "items",
     tags: "draw artist drawing tutorial kai"
   },
@@ -220,7 +220,7 @@ const data = [
     title: "idk", // 25
     desc: "imbouttobust",
     image: "img/alexis-idk.png",
-    link: "Articles/alexis-idk.html",
+    link: "Articles/article.html?article=13",
     place: "items",
     tags: "idk alexis"
   },
@@ -228,7 +228,7 @@ const data = [
     title: "corona virus", // 26
     desc: "aka covid-19",
     image: "img/nolan-covid.jpeg",
-    link: "Articles/nolan-covid.html",
+    link: "Articles/article.html?article=14",
     place: "items",
     tags: "corona virus covid-19 covid 19 pandemic world lockdown nolan"
   },
@@ -236,7 +236,7 @@ const data = [
     title: "Southridge High School", // 27
     desc: "beaverton OR",
     image: "img/nolan-the-ridge.jpeg",
-    link: "Articles/nolan-shs.html",
+    link: "Articles/article.html?article=15",
     place: "items",
     tags: "school southridge high school beaverton school district admin oregon united states of american high school public school nolan"
   },
@@ -244,18 +244,15 @@ const data = [
     title: "World Trade Center", // 28
     desc: "i forgot",
     image: "img/nolan-wtc.jpeg",
-    link: "Articles/nolan-wtc.html",
+    link: "Articles/article.html?article=16",
     place: "items",
-    tags: "american explosion wtc world trade center 9/11 united states of america osama bin laden nolan",
-    text: "1. built along tim ago<br>2. demolished in 2001 without a permit<br>3. every1 sad or somthing",
-    writer: "Osama",
-    artName: "World Trade Center"
+    tags: "american explosion wtc world trade center 9/11 united states of america osama bin laden nolan"
   },
   {
     title: "doors rblx", // 29
     desc: "funny",
     image: "img/nolan-doors.jpeg",
-    link: "Articles/nolan-doors.html",
+    link: "Articles/article.html?article=17",
     place: "items",
     tags: "doors roblox doors game gaming this looks like gaming area nolan"
   },
@@ -263,7 +260,7 @@ const data = [
     title: "seamen", // 30 eeeeeeeeeeeeeeeeeeeeeeeeeee
     desc: "aka sailors",
     image: "img/nolan-seamen.jpeg",
-    link: "Articles/nolan-seamen.html",
+    link: "Articles/article.html?article=18",
     place: "items",
     tags: "seamen semen sea ocean water earth h2o h20 nolan"
   },
@@ -271,7 +268,7 @@ const data = [
     title: "carrot", // 31
     desc: "carrot",
     image: "img/nolan-carrot.png",
-    link: "Articles/nolan-carrot.html",
+    link: "Articles/article.html?article=19",
     place: "items",
     tags: "food carrot vegetable fruit nolan"
   },
@@ -279,15 +276,15 @@ const data = [
     title: "Ford F150", // 32
     desc: "best car",
     image: "img/nolan-f150.jpeg",
-    link: "Articles/nolan-f150.html",
+    link: "Articles/article.html?article=20",
     place: "items",
-    tags: "america fat man car pickup truck racist polar destroyer nolan"
+    tags: "henry ford america fat man car pickup truck racist polar destroyer nolan"
   },
   {
     title: "how to drive", // 33
     desc: "drive",
     image: "img/nolan-drive.jpeg",
-    link: "Articles/nolan-drive.html",
+    link: "Articles/article.html?article=21",
     place: "items",
     tags: "motor vehicle car driving test drive sedan coupe pickup truck hatchback suv nolan"
   },
@@ -295,7 +292,7 @@ const data = [
     title: "gambling", // 34
     desc: "zoom",
     image: "img/nolan-gambling.jpeg",
-    link: "Articles/nolan-gambling.html",
+    link: "Articles/article.html?article=22",
     place: "items",
     tags: "doors roblox doors game gaming this looks like gaming area nolan"
   },
@@ -311,7 +308,7 @@ const data = [
     title: "ram", // 36
     desc: "built serve",
     image: "img/nolan-ram.jpg",
-    link: "Articles/nolan-ram.html",
+    link: "Articles/article.html?article=24",
     place: "items",
     tags: "ram 1500 american polar destroyer polluter cruiser nolan"
   },

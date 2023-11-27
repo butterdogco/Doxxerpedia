@@ -11,9 +11,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <div class="alert" id="alertDiv">
-      <p>tis paeg new and bugy, so report bug if find <a href="https://github.com/butterdogco/Wikabedia/issues/new" target="_blank">here</a>.</p>
-    </div>
+    <!--<div class="alert" id="alertDiv">
+    <p>tis paeg new and bugy, so report bug if find <a href="https://github.com/butterdogco/Wikabedia/issues/new" target="_blank">here</a>.</p>
+    </div>-->
     <img src="../img/wikabedia.png" class="logo" onclick="site('../index.html')">
     <img src="../img/back.png" class="logo2" onclick="site('../index.html')">
     <h1 class="logoText">wikabedia</h1>
@@ -25,6 +25,7 @@
       <h1 class="articleTitle" id="articleTitle">loading</h1>
       <pre class="articleText" id="articleText">pls wait</pre>
       <p class="articleWriter" id="articleWriter">article by your mother</p>
+      <p class="articleWriter" id="articleDate">created 09/49/1948</p>
     </div>
     <hr>
     <h2 class="recomend" onclick="load('no don click me','why did you click that','../img/wikabedia.png','#','recomend');">recomend articles</h2>
@@ -79,6 +80,8 @@
               document.getElementById(id).innerHTML = ''.concat("article by ",val);
             } else if (mode === "pageTitle") {
               document.title = val + " - wikabedia";
+            } else if (mode === "dateMade") {
+              document.getElementById(id).innerHTML = 'created ' + val;
             }
       
             return val;
@@ -90,6 +93,7 @@
       sheetData("F" + articleNum,"articleImg","image");
       sheetData("C" + articleNum,"articleWriter","writer");
       sheetData("G" + articleNum,"","pageTitle");
+      sheetData("A" + articleNum,"articleDate","dateMade");
       
       function checkLoad() {
         if(document.getElementById('articleTitle').innerHTML != "loading" == false) {
