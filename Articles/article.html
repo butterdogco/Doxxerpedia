@@ -52,6 +52,21 @@
         alert("We've ran into a problem, please report the following text on the GitHub page: " + error);
       };
       
+      function responseCount() {
+        const spreadsheetId = "1LlL8mrSXTTV6qHOkUKd57oVb0uZATq037Wg4ltlDreg"; // Replace with your Google Sheets ID
+        const sheetName = "Form Responses 2"; // Replace with your sheet name
+        const apiKey = "AIzaSyBie4PasgrxYkF7LRl8zcCGUsnBnwZ8pWE"; // Replace with your API key
+      
+        const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${sheetName}?key=${apiKey}`;
+      
+        fetch(url)
+          .then(response => response.json())
+          .then(data => {
+            const responseCount = data.values.length - 1; // Subtract 1 to exclude header row
+          })
+          .catch(error => console.error(error));
+      }
+      
       var url = new URL(window.location);
       const articleNum = url.searchParams.get("article");
 
@@ -73,15 +88,40 @@
                 console.log(err);
               }
             } else if (mode === "title") {
-              document.getElementById(id).innerHTML = val;
+              if (val === undefined) {
+                document.getElementById(id).innerHTML = "tis article no exist i tink";
+              } else {
+                document.getElementById(id).innerHTML = val;
+              }
             } else if (mode === "text") {
-              document.getElementById(id).innerHTML = val;
+              if (val === undefined) {
+                document.getElementById(id).innerHTML = "i forgor the text";
+              } else {
+                document.getElementById(id).innerHTML = val;
+              }
             } else if (mode === "writer") {
-              document.getElementById(id).innerHTML = ''.concat("article by ",val);
+              if (val === undefined) {
+                document.getElementById(id).innerHTML = ''.concat("article by ","your mother");
+              } else {
+                document.getElementById(id).innerHTML = ''.concat("article by ",val);
+              }
             } else if (mode === "pageTitle") {
-              document.title = val + " - wikabedia";
+              if (val === undefined) {
+                document.title = "nothing - wikabedia";
+              } else {
+                document.title = val + " - wikabedia";
+              }
             } else if (mode === "dateMade") {
-              document.getElementById(id).innerHTML = 'created ' + val;
+              if (val === undefined) {
+                document.getElementById(id).innerHTML = 'created tomorrow';
+              } else {
+                document.getElementById(id).innerHTML = 'created ' + val;
+              }
+            } else if (mode === "approved") {
+              if (val.toString() === 'no') {
+                window.location.href = "../Articles/article.html?article=1";
+                alert("This article has be removed by a moderator.")
+              }
             }
       
             return val;
@@ -94,6 +134,7 @@
       sheetData("C" + articleNum,"articleWriter","writer");
       sheetData("G" + articleNum,"","pageTitle");
       sheetData("A" + articleNum,"articleDate","dateMade");
+      sheetData("I" + articleNum,"","approved");
       
       function checkLoad() {
         if(document.getElementById('articleTitle').innerHTML != "loading" == false) {

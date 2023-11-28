@@ -1,6 +1,6 @@
 // This is the directory of every article in Wikabedia, every article has an ID (the number it is down the list + 1)
 
-function getSheetData(c1, c2) {
+function getSheetData2(c1, c2) {
   const spreadsheetId = '1LlL8mrSXTTV6qHOkUKd57oVb0uZATq037Wg4ltlDreg';
   const range = 'Form Responses 2!' + c1; // Specify the sheet name and range
 
@@ -21,7 +21,7 @@ function getSheetData(c1, c2) {
  // H = mainText
  // I = appropriate or not
 
-const data = [
+let data = [
   {
     title: "wrld histry", // 1
     desc: "te worlds histry",
@@ -164,7 +164,7 @@ const data = [
     title: "us histrey", // 18
     desc: "ameica",
     image: "img/us-history.jpg",
-    link: "Articles/article.html?article=6",
+    link: "Articles/us-history.html",
     place: "items",
     tags: "us united states of america american fat burger cheese sodium fat man fat people truck f150 ford falcon history histrey histoy fat men pollution gun pew pew weapons pistol assualt rifle shotgun glock 19 glock 17 ar 15 ar15 non-free healthcare food drugs death killing school shootings bacon unhealthy racism black white supremacy joe biden donald trump donald dump fatass rootbeer root beer coke coca-cola coca cola polar destroyer icecap melter ice cap melter earth heater global warming guns military tanks abrams shit drivers culture assholes 'merica 'merican blackface start of racism creator racism inventor"
   },
@@ -172,7 +172,7 @@ const data = [
     title: "how 2 maek mony", // 19
     desc: "b ritch",
     image: "img/nolan-b-ritch.jpg",
-    link: "Articles/article.html?article=7",
+    link: "Articles/article.html?article=6",
     place: "items",
     tags: "money cash be rich bank of america nolan"
   },
@@ -180,7 +180,7 @@ const data = [
     title: "top 5 positions", // 20
     desc: "like and sub",
     image: "img/nolan-top-5-positions.png",
-    link: "Articles/article.html?article=8",
+    link: "Articles/article.html?article=7",
     place: "items",
     tags: "sit down sitting down seating chair positions nolan"
   },
@@ -188,7 +188,7 @@ const data = [
     title: "How 2 Invest", // 21
     desc: "Get ritch",
     image: "img/nolan-how-2-invest.jpg",
-    link: "Articles/article.html?article=9",
+    link: "Articles/article.html?article=8",
     place: "items",
     tags: "invest money rich ritch investing money cash dollar $ nolan"
   },
@@ -385,6 +385,72 @@ const data = [
     tags: "beaverton school district mhs southridge high school kai"
   }
 ];
+
+function getResponseCount() {
+  const spreadsheetId = "1LlL8mrSXTTV6qHOkUKd57oVb0uZATq037Wg4ltlDreg"; // Replace with your Google Sheets ID
+  const sheetName = "Form Responses 2"; // Replace with your sheet name
+  const apiKey = "AIzaSyBie4PasgrxYkF7LRl8zcCGUsnBnwZ8pWE"; // Replace with your API key
+
+  const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${sheetName}?key=${apiKey}`;
+
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      const responseCount = data.values.length - 1; // Subtract 1 to exclude header row
+    })
+    .catch(error => console.error(error));
+}
+
+
+function getResponseData() {
+  const spreadsheetId = "1LlL8mrSXTTV6qHOkUKd57oVb0uZATq037Wg4ltlDreg"; // Replace with your Google Sheets ID
+  const sheetName = "Form Responses 2"; // Replace with your sheet name
+  const apiKey = "AIzaSyBie4PasgrxYkF7LRl8zcCGUsnBnwZ8pWE"; // Replace with your API key
+
+  const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${sheetName}?key=${apiKey}`;
+
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      const responseData = formatResponseData(data);
+    })
+    .catch(error => console.error(error));
+}
+
+function formatResponseData(data) {
+  const formattedData = [];
+
+  // Assuming the responses start from the second row, skipping the header row
+  for (let i = 1; i < data.values.length; i++) {
+    const response = data.values[i];
+    const responseNumber = i + 1; // Add 1 to align with 1-based index
+    
+    try { // Fix the image URL so it can be displayed
+      const imageId = val.toString().replace('https://drive.google.com/open?id=', '');
+      const newImageUrl = `https://drive.google.com/uc?export=view&id=${imageId}`;
+      imageURL = newImageUrl;
+    }
+    catch (err) {
+      console.log(err);
+    }
+
+    const item = {
+      title: response[3], // Column D
+      desc: response[4], // Column E
+      image: imageURL, // Column F
+      link: `Articles/article.html?article=${responseNumber}`, // Use responseNumber in URL
+      place: "items", // Fixed value as "items"
+      tags: "" // Leave empty for now
+    };
+
+    formattedData.push(item);
+  }
+
+  return formattedData;
+}
+
+// alert(JSON.stringify(data))
+
 
 // A = date made
 // B = email
