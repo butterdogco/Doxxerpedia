@@ -173,7 +173,14 @@
   }
   
   .loading {
-    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    background: white;
+    transition: 0.2s ease;
   }
   
   .loading-icon {
@@ -191,10 +198,10 @@
     border-radius: 50%;
     width: 10vh;
     height: 10vh;
-    animation: spin 1.5s ease-in-out infinite;
+    animation: spin 1s linear infinite;
     position: fixed;
-    top: 43.5%;
-    left: 46%;
+    top: calc(50% - 6.75vh);
+    left: calc(50% - 6.75vh);
     transform: translate(-50%,-50%);
   }
   
