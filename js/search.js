@@ -39,7 +39,7 @@ function site(url) {
   },250);
 }
 
-function search(mode) {
+async function search(mode) {
   var searchItemsElement = document.getElementById("searchItems");
   searchItemsElement.innerHTML = "";
 
@@ -75,6 +75,10 @@ function search(mode) {
 
     // Use the search query to perform a search or any other operations
     // For example, search through a list of items
+    while (!done) {
+      await new Promise(resolve => setTimeout(resolve, 150)); // Wait for 100 milliseconds
+    }
+    
     data.forEach(item => {
       var words = searchQuery.split(' ');
       var found = false;

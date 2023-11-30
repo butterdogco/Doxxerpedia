@@ -164,7 +164,7 @@ let data = [
     title: "us histrey", // 18
     desc: "ameica",
     image: "img/us-history.jpg",
-    link: "Articles/us-history.html",
+    link: "Articles/us-histrey.html",
     place: "items",
     tags: "us united states of america american fat burger cheese sodium fat man fat people truck f150 ford falcon history histrey histoy fat men pollution gun pew pew weapons pistol assualt rifle shotgun glock 19 glock 17 ar 15 ar15 non-free healthcare food drugs death killing school shootings bacon unhealthy racism black white supremacy joe biden donald trump donald dump fatass rootbeer root beer coke coca-cola coca cola polar destroyer icecap melter ice cap melter earth heater global warming guns military tanks abrams shit drivers culture assholes 'merica 'merican blackface start of racism creator racism inventor"
   },
@@ -406,7 +406,7 @@ let data = [
   //   image: "img/war-crimes.jpeg",
   //   link: "Articles/article.html?article=36",
   //   place: "items",
-  //   tags: "how to commit war crimes criminal missile bomb explode death keegan offical article"
+    //   tags: "how to commit war crimes criminal missile bomb explode death keegan offical article"
   // }
 ];
 
@@ -442,7 +442,7 @@ function getResponseData() {
       data.push(...responseData);
       done = true;
     })
-    .catch(error => alert(error));
+    .catch(error => console.error(error));
 }
 
 function formatResponseData(dat) {
@@ -469,7 +469,7 @@ function formatResponseData(dat) {
         image: imageURL, // Column F
         link: `Articles/article.html?article=${responseNumber}`, // Use responseNumber in URL
         place: "items", // Fixed value as "items"
-        tags: response[2] // Leave empty for now
+        tags: response[2] + response[1] // Column B, & Column C (email & name)
       };
   
       formattedData.push(item);

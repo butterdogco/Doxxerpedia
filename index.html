@@ -80,7 +80,11 @@
             }
             
             const e = data[3];
+            const f = data[13];
+            const g = data[9];
             load(e.title,e.desc,e.image,e.link,"top");
+            load(f.title,f.desc,f.image,f.link,"top");
+            load(g.title,g.desc,g.image,g.link,"top");
           }
           catch (err) {
             console.error(err);
