@@ -5,8 +5,11 @@ function changeBackgroundImage() {
   currentIndex = (currentIndex + 1) % imageList.length; // Cycle to the next image
 }
 
-function backgroundImage() {
+async function backgroundImage() {
   try {
+    while (!done) {
+      await new Promise(resolve => setTimeout(resolve, 150));
+    }
     const shuffledData = data.slice();
     for (let i = shuffledData.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
