@@ -23,7 +23,19 @@ async function backgroundImage() {
       if (item.desc === null) {
         item.desc = "No description";
       }
-      imageList.push(item.image); // Save item.image into the list
+      
+      const image = item.image.toString();
+      let img = '';
+      
+      if (image.includes("../") === false) {
+        if (image.includes("https://drive.google.com") === true) {
+          img = image;
+        }
+      } else {
+        img = image.replace('../','');
+      }
+      
+      imageList.push(img); // Save item.image into the list
     });
 
     changeBackgroundImage(); // Display the first image immediately
