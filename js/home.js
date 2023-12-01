@@ -7,14 +7,27 @@ function sleep(milliseconds) {
 }
 
 function load(head,text,image,url,e) {
-  web = "site('" + url + "')"
+  web = "site('" + url + "')";
   const div = document.createElement('div');
   const img = document.createElement('img');
   const hding = document.createElement('h3');
   const p = document.createElement('p');
   div.setAttribute('class','item');
-  div.setAttribute('onclick',web)
-  img.setAttribute('src',image)
+  div.setAttribute('onclick',web);
+  
+try {
+  const valStr = image.toString();
+  
+  if (image.toString().includes("../") === false) {
+    img.setAttribute('src', image);
+  } else {
+    const e = image.toString().replace('../','');
+    img.setAttribute('src', e);
+  }
+} catch (err) {
+  alert(err);
+}
+  
   hding.innerHTML = head;
   p.innerHTML = text;
   

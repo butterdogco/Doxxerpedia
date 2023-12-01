@@ -14,7 +14,11 @@ function sleep(milliseconds) {
 
 function load(head,text,image,url,e) {
   web = "site('../" + url + "')";
-  image = "../" + image;
+  if (image.toString().includes("../") === false) {
+    if (image.toString().includes("https://drive.google.com") === false) {
+      image = "../" + image;
+    }
+  }
   const div = document.createElement('div');
   const img = document.createElement('img');
   const hding = document.createElement('h3');

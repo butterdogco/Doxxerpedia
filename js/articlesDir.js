@@ -454,12 +454,16 @@ function formatResponseData(dat) {
     const responseNumber = i + 1; // Add 1 to align with 1-based index
     
     try { // Fix the image URL so it can be displayed
-      const imageId = response[5].toString().replace('https://drive.google.com/open?id=', '');
-      const newImageUrl = `https://drive.google.com/uc?export=view&id=${imageId}`;
-      imageURL = newImageUrl;
+      if (response[5].toString().includes('../') === true) {
+       imageURL = response[5];
+      } else {
+        const imageId = response[5].toString().replace('https://drive.google.com/open?id=', '');
+        const newImageUrl = `https://drive.google.com/uc?export=view&id=${imageId}`;
+        imageURL = newImageUrl;
+      }
     }
     catch (err) {
-      console.error(err);
+      alert(err);
     }
     
     if (response[8] != "no") {

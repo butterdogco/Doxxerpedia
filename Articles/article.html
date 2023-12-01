@@ -23,7 +23,7 @@
         <img src="../img/wikabedia.png" id="articleImg">
       </div>
       <h1 class="articleTitle" id="articleTitle">loading</h1>
-      <pre class="articleText" id="articleText">pls wait</pre>
+      <pre class="articleText" id="articleText">if you see this text your internet is a hot pile of garbage</pre>
       <p class="articleWriter" id="articleWriter">article by your mother</p>
       <p class="articleWriter" id="articleDate">created 09/49/1948</p>
     </div>
@@ -80,12 +80,19 @@
             let val = data.values;
             if (mode === "image") {
               try {
-                const imageId = val.toString().replace('https://drive.google.com/open?id=', '');
-                const newImageUrl = `https://drive.google.com/uc?export=view&id=${imageId}`;
-                document.getElementById(id).src = newImageUrl;
-              }
-              catch (err) {
-                console.log(err);
+                const linkPattern = /^https:\/\/drive\.google\.com\/open\?id=.*/;
+                const valStr = val.toString();
+              
+                if (linkPattern.test(valStr)) {
+                  const imageId = valStr.replace('https://drive.google.com/open?id=', '');
+                  const newImageUrl = `https://drive.google.com/uc?export=view&id=${imageId}`;
+                  document.getElementById(id).src = newImageUrl;
+                } else {
+                  // If it's not a specific Google Drive link, assign val as the image source
+                  document.getElementById(id).src = valStr;
+                }
+              } catch (err) {
+                console.error(err);
               }
             } else if (mode === "title") {
               if (val === undefined) {
