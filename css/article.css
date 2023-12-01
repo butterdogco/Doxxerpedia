@@ -47,12 +47,13 @@
     100% { transform: rotate(360deg); }
   }
   
-  html {
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
     background: white;
   }
 
   body {
-    background: white;
     font-family: "Dm Sans", sans-serif;
     margin: 0;
     animation: fadeIn 0.2s ease;
@@ -132,6 +133,11 @@
   .logo:hover ~ .logo2, .logo2:hover {
     opacity: 1;
     animation: none;
+  }
+  
+  .logo2:hover:has(.logo) {
+    animation: none;
+    opacity: 0;
   }
   
   .items, #items {
@@ -217,6 +223,7 @@
     text-align: center;
     z-index: 1;
     position: absolute;
+    width: 95vw;
     top: 15vh;
     left: 50%;
     transform: translateX(-50%);
