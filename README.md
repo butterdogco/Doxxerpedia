@@ -1,2 +1,2 @@
 # What's Wikabedia?
-Wikabedia is the worlds number one source of information, this repository contains all the code for the entire website.
+Wikabedia is an open-source, free to use, encyclopedia. We allow you to upload, and edit articles on our website via Google Forms. Our website relies on Google APIs, and uses Google Forms, and Google Sheets.
