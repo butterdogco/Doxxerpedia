@@ -48,7 +48,8 @@
       fetch(url)
         .then(response => response.json())
         .then(data => {
-          const responseCount = data.values.length - 1; // Subtract 1 to exclude header row
+          var responseCount = data.values.length - 1; // Subtract 1 to exclude header row
+          return responseCount;
         })
         .catch(error => console.error(error));
     }
