@@ -27,7 +27,7 @@
   </div>
   <hr>
   <h2 class="recomend"
-    onclick="load('no don click me',responseCount(),'../img/wikabedia.png','#','recomend');">recomend articles
+    onclick="load('no don click me','why did you click that','../img/wikabedia.png','#','recomend');">recomend articles
   </h2>
   <div class="items" id="recomend"></div>
   <div class="loading" id="loadDiv">
@@ -58,6 +58,7 @@
     var articleNum = url.searchParams.get("article");
 
     if (articleNum === "latest") {
+      alert(responseCount);
       articleNum = responseCount;
     }
 
