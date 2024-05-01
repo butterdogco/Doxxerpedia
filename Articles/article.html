@@ -38,12 +38,12 @@
   <script src="../js/articlesDir.js"></script>
   <script src="../js/article.js"></script>
   <script>
-    function responseCount() {
+    var responseCount = 0;
+    function responseCountFunc() {
       const spreadsheetId = "1LlL8mrSXTTV6qHOkUKd57oVb0uZATq037Wg4ltlDreg";
       const sheetName = "Form Responses 2";
       const apiKey = "AIzaSyBie4PasgrxYkF7LRl8zcCGUsnBnwZ8pWE";
       const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${sheetName}?key=${apiKey}`;
-      var responseCount = 0;
 
       fetch(url)
         .then(response => response.json())
@@ -51,11 +51,15 @@
           responseCount = data.values.length - 1; // Subtract 1 to exclude header row
         })
         .catch(error => console.error(error));
-      return responseCount;
     }
+    responseCountFunc();
 
     var url = new URL(window.location);
-    const articleNum = url.searchParams.get("article");
+    var articleNum = url.searchParams.get("article");
+
+    if (articleNum === "latest") {
+      articleNum = responseCount;
+    }
 
     function sheetData(c1, id, mode) {
       const spreadsheetId = '1LlL8mrSXTTV6qHOkUKd57oVb0uZATq037Wg4ltlDreg';
