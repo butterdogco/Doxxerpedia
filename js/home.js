@@ -18,11 +18,11 @@ function load(head,text,image,url,e) {
 try {
   const valStr = image.toString();
   
-  if (image.toString().includes("../") === false) {
-    img.setAttribute('src', image);
-  } else {
+  if (image.toString().test(/\.\.\//i)) {
     const e = image.toString().replace('../','');
     img.setAttribute('src', e);
+  } else {
+    img.setAttribute('src', image);
   }
 } catch (err) {
   alert(err);

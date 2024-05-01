@@ -67,10 +67,6 @@
     <script src="js/backgroundImage.js"></script>
     <script src="js/autocomplete.js"></script>
     <script>
-      window.onerror = function(error) {
-        // alert("We've ran into a problem, please report the following text on the Wikabedia GitHub page: " + error);
-      };
-      
       function createDefaults() {
         if (done === false) {
           setTimeout(createDefaults,500);
@@ -96,7 +92,7 @@
       function checkLoad() {
         if(done === true) {
           document.getElementById('loadDiv').style.opacity = 0;
-          window.setTimeout(function(){
+          window.setTimeout(function() {
             document.getElementById('loadDiv').remove();
           }, 200);
         } else {

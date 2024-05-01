@@ -17,12 +17,12 @@ async function createDefaults() {
     // Call the load function for each of the random items
     randomItems.forEach(item => {
       if (item.desc === null) {
-        item.desc = "No description";
+        item.desc = "no descwiption";
       }
       load(item.title, item.desc, item.image, item.link, "recomend");
     });
   } catch (error) {
-    alert(error)
+    alert(error);
   }
 }
 

@@ -48,14 +48,10 @@
     <script src="../js/articlesDir.js"></script>
     <script src="../js/article.js"></script>
     <script>
-      window.onerror = function(error) {
-        // alert("We've ran into a problem, please report the following text on the GitHub page: " + error);
-      };
-      
       function responseCount() {
-        const spreadsheetId = "1LlL8mrSXTTV6qHOkUKd57oVb0uZATq037Wg4ltlDreg"; // Replace with your Google Sheets ID
-        const sheetName = "Form Responses 2"; // Replace with your sheet name
-        const apiKey = "AIzaSyBie4PasgrxYkF7LRl8zcCGUsnBnwZ8pWE"; // Replace with your API key
+        const spreadsheetId = "1LlL8mrSXTTV6qHOkUKd57oVb0uZATq037Wg4ltlDreg";
+        const sheetName = "Form Responses 2";
+        const apiKey = "AIzaSyBie4PasgrxYkF7LRl8zcCGUsnBnwZ8pWE";
       
         const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${sheetName}?key=${apiKey}`;
       
@@ -72,7 +68,7 @@
 
       function sheetData(c1, id, mode) {
         const spreadsheetId = '1LlL8mrSXTTV6qHOkUKd57oVb0uZATq037Wg4ltlDreg';
-        const range = 'Form Responses 2!' + c1; // Specify the sheet name and range
+        const range = 'Form Responses 2!' + c1;
       
         fetch(`https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${range}?key=AIzaSyBie4PasgrxYkF7LRl8zcCGUsnBnwZ8pWE`)
           .then(response => response.json())
