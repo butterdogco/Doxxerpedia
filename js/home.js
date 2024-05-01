@@ -18,14 +18,14 @@ function load(head,text,image,url,e) {
 try {
   const valStr = image.toString();
   
-  if (image.toString().test(/\.\.\//i)) {
+  if (image.toString().includes("../")) {
     const e = image.toString().replace('../','');
     img.setAttribute('src', e);
   } else {
     img.setAttribute('src', image);
   }
 } catch (err) {
-  alert(err);
+  console.error(err);
 }
   
   hding.innerHTML = head;
