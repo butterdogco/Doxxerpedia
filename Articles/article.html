@@ -42,16 +42,16 @@
       const spreadsheetId = "1LlL8mrSXTTV6qHOkUKd57oVb0uZATq037Wg4ltlDreg";
       const sheetName = "Form Responses 2";
       const apiKey = "AIzaSyBie4PasgrxYkF7LRl8zcCGUsnBnwZ8pWE";
-
       const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${sheetName}?key=${apiKey}`;
+      var responseCount = 0;
 
       fetch(url)
         .then(response => response.json())
         .then(data => {
-          var responseCount = data.values.length - 1; // Subtract 1 to exclude header row
-          return responseCount;
+          responseCount = data.values.length - 1; // Subtract 1 to exclude header row
         })
         .catch(error => console.error(error));
+      return responseCount;
     }
 
     var url = new URL(window.location);
