@@ -16,10 +16,11 @@ function load(head,text,image,url,e) {
   div.setAttribute('onclick',web);
   
 try {
-  const valStr = image.toString();
+  var string = image.toString();
+  var pattern = /\.\.\//i;
   
-  if (image.toString().includes("../")) {
-    const e = image.toString().replace('../','');
+  if (pattern.test(string)) {
+    const e = string.replace('../','');
     img.setAttribute('src', e);
   } else {
     img.setAttribute('src', image);
