@@ -79,7 +79,7 @@
     animation: item 0.5s ease;
     width: 225px;
     height: 15vw;
-    max-height: 15vh;
+    max-height: 30vh;
     background: rgb(240,240,240);
     padding: 0.8vw;
     text-align: center;
