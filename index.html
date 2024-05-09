@@ -72,7 +72,9 @@
         } else {
           try {
             for (var item of data) {
-              load(item.title, item.desc, item.image, item.link, item.place);
+              if (item.title && item.desc && item.image && item.link && item.place) {
+                load(item.title, item.desc, item.image, item.link, item.place);
+              }
             }
             
             const e = data[3];
