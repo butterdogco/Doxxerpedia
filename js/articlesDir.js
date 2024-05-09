@@ -174,7 +174,7 @@ function formatResponseData(dat) {
         imageURL = response[5];
       } else {
         const imageId = response[5].toString().replace('https://drive.google.com/open?id=', '');
-        const newImageUrl = `https://drive.usercontent.google.com/download?id=${imageId}&export=view&authuser=0`;
+        const newImageUrl = `https://drive.google.com/thumbnail?id=${imageId}`;
         imageURL = newImageUrl;
       }
     }
