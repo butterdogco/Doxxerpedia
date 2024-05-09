@@ -19,7 +19,9 @@ async function createDefaults() {
       if (item.desc === null) {
         item.desc = "no descwiption";
       }
-      load(item.title, item.desc, item.image, item.link, "recomend");
+      if (item.title && item.desc && item.image && item.link) {
+        load(item.title, item.desc, item.image, item.link, "recomend");
+      }
     });
   } catch (error) {
     console.error(error);
