@@ -8,18 +8,18 @@
 //     .then(response => response.json())
 //     .then(data => {
 //       let val = data.values;
-      
+
 //       return val;
 //     });
 // }
- 
- // C = name
- // D = title
- // E = desc
- // F = image
- // G = articleTitle
- // H = mainText
- // I = appropriate or not
+
+// C = name
+// D = title
+// E = desc
+// F = image
+// G = articleTitle
+// H = mainText
+// I = appropriate or not
 
 let data = [
   {
@@ -119,295 +119,7 @@ let data = [
     link: "Articles/how-to-math-do.html",
     place: "items",
     tags: "how to do math algebra sin cos tan calculator maht meth keegan"
-  },
-  // {
-  //   title: "trens", // 13
-  //   desc: "choo chooooo",
-  //   image: "img/noah-trens.png",
-  //   link: "Articles/article.html?article=2",
-  //   place: "items",
-  //   tags: "train whistle trains choo choo train noah"
-  // },
-  // {
-  //   title: "da buterdog", // 14
-  //   desc: "the ceo",
-  //   image: "img/butterdog.jpg",
-  //   link: "Articles/nolan-da-buterdog.html",
-  //   place: "items",
-  //   tags: "the ceo of butterdogco buterdog nolan"
-  // },
-  {
-    title: "wat da dog", // 15
-    desc: "wof oof",
-    image: "img/wat-da-dog.jpg",
-    link: "Articles/wat-da-dog.html",
-    place: "items",
-    tags: "whats a dog what's a dog woof bark doggy doggie keegan"
-  },
-  // {
-  //   title: "Noe nane givn1!", // 16
-  //   desc: "tha artical",
-  //   image: "img/kai-I fogot.JPG",
-  //   link: "Articles/article.html?article=4",
-  //   place: "items",
-  //   tags: "i don no idk i don't know dont confused random potato kai"
-  // },
-  // {
-  //   title: "E", // 17
-  //   desc: "'E'",
-  //   image: "img/kai-e.jpg",
-  //   link: "Articles/article.html?article=5",
-  //   place: "items",
-  //   tags: "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE 'e' letter leter alphabet abc's abcs abcdefghijklmnopqrstuvwxyz kai"
-  // },
-  {
-    title: "us histrey", // 18
-    desc: "ameica",
-    image: "img/us-history.jpg",
-    link: "Articles/us-histrey.html",
-    place: "items",
-    tags: "us united states of america american fat burger cheese sodium fat man fat people truck f150 ford falcon history histrey histoy fat men pollution gun pew pew weapons pistol assualt rifle shotgun glock 19 glock 17 ar 15 ar15 non-free healthcare food drugs death killing school shootings bacon unhealthy racism black white supremacy joe biden donald trump donald dump fatass rootbeer root beer coke coca-cola coca cola polar destroyer icecap melter ice cap melter earth heater global warming guns military tanks abrams shit drivers culture assholes 'merica 'merican blackface start of racism creator racism inventor"
-  },
-  // {
-  //   title: "how 2 maek mony", // 19
-  //   desc: "b ritch",
-  //   image: "img/nolan-b-ritch.jpg",
-  //   link: "Articles/article.html?article=6",
-  //   place: "items",
-  //   tags: "money cash be rich bank of america nolan"
-  // },
-  //   {
-  //   title: "top 5 positions", // 20
-  //   desc: "like and sub",
-  //   image: "img/nolan-top-5-positions.png",
-  //   link: "Articles/article.html?article=7",
-  //   place: "items",
-  //   tags: "sit down sitting down seating chair positions nolan"
-  // },
-  // {
-  //   title: "How 2 Invest", // 21
-  //   desc: "Get ritch",
-  //   image: "img/nolan-how-2-invest.jpg",
-  //   link: "Articles/article.html?article=8",
-  //   place: "items",
-  //   tags: "invest money rich ritch investing money cash dollar $ nolan"
-  // },
-  // {
-  //   title: "wrld histry 2: rematserd", // 22
-  //   desc: "new version",
-  //   image: "img/nolan-world-history-2.jpeg",
-  //   link: "Articles/article.html?article=10",
-  //   place: "items",
-  //   tags: "world history earth lore world lore nolan"
-  // },
-  // {
-  //   title: "Your answer", // 23
-  //   desc: "Your answer",
-  //   image: "img/nolan-your-answer.png",
-  //   link: "Articles/article.html?article=11",
-  //   place: "items",
-  //   tags: "your answer useless article nolan"
-  // },
-  // {
-  //   title: "How to draw good", // 24
-  //   desc: "how 2 draw",
-  //   image: "img/kai-how-to-draw.PNG",
-  //   link: "Articles/article.html?article=12",
-  //   place: "items",
-  //   tags: "draw artist drawing tutorial kai"
-  // },
-  // {
-  //   title: "idk", // 25
-  //   desc: "imbouttobust",
-  //   image: "img/alexis-idk.png",
-  //   link: "Articles/article.html?article=13",
-  //   place: "items",
-  //   tags: "idk alexis"
-  // },
-  // {
-  //   title: "corona virus", // 26
-  //   desc: "aka covid-19",
-  //   image: "img/nolan-covid.jpeg",
-  //   link: "Articles/article.html?article=14",
-  //   place: "items",
-  //   tags: "corona virus covid-19 covid 19 pandemic world lockdown nolan"
-  // },
-  // {
-  //   title: "Southridge High School", // 27
-  //   desc: "beaverton OR",
-  //   image: "img/nolan-the-ridge.jpeg",
-  //   link: "Articles/article.html?article=15",
-  //   place: "items",
-  //   tags: "school southridge high school beaverton school district admin oregon united states of american high school public school nolan"
-  // },
-  // {
-  //   title: "World Trade Center", // 28
-  //   desc: "i forgot",
-  //   image: "img/nolan-wtc.jpeg",
-  //   link: "Articles/article.html?article=16",
-  //   place: "items",
-  //   tags: "american explosion wtc world trade center 9/11 united states of america osama bin laden nolan"
-  // },
-  // {
-  //   title: "doors rblx", // 29
-  //   desc: "funny",
-  //   image: "img/nolan-doors.jpeg",
-  //   link: "Articles/article.html?article=17",
-  //   place: "items",
-  //   tags: "doors roblox doors game gaming this looks like gaming area nolan"
-  // },
-  // {
-  //   title: "seamen", // 30 eeeeeeeeeeeeeeeeeeeeeeeeeee
-  //   desc: "aka sailors",
-  //   image: "img/nolan-seamen.jpeg",
-  //   link: "Articles/article.html?article=18",
-  //   place: "items",
-  //   tags: "seamen semen sea ocean water earth h2o h20 nolan"
-  // },
-  //   {
-  //   title: "carrot", // 31
-  //   desc: "carrot",
-  //   image: "img/nolan-carrot.png",
-  //   link: "Articles/article.html?article=19",
-  //   place: "items",
-  //   tags: "food carrot vegetable fruit nolan"
-  // },
-  // {
-  //   title: "Ford F150", // 32
-  //   desc: "best car",
-  //   image: "img/nolan-f150.jpeg",
-  //   link: "Articles/article.html?article=20",
-  //   place: "items",
-  //   tags: "henry ford america fat man car pickup truck racist polar destroyer nolan"
-  // },
-  // {
-  //   title: "how to drive", // 33
-  //   desc: "drive",
-  //   image: "img/nolan-drive.jpeg",
-  //   link: "Articles/article.html?article=21",
-  //   place: "items",
-  //   tags: "motor vehicle car driving test drive sedan coupe pickup truck hatchback suv nolan"
-  // },
-  // {
-  //   title: "gambling", // 34
-  //   desc: "zoom",
-  //   image: "img/nolan-gambling.jpeg",
-  //   link: "Articles/article.html?article=22",
-  //   place: "items",
-  //   tags: "doors roblox doors game gaming this looks like gaming area nolan"
-  // },
-  // {
-  //   title: "how newclr futin", // 35
-  //   desc: "REAL!?!?!?/1",
-  //   image: "img/alex-nuclear.webp",
-  //   link: "Articles/alex-nuclear.html",
-  //   place: "items",
-  //   tags: "nuclear fusion tutorial illegal boom alex"
-  // },
-  // {
-  //   title: "ram", // 36
-  //   desc: "built serve",
-  //   image: "img/nolan-ram.jpg",
-  //   link: "Articles/article.html?article=24",
-  //   place: "items",
-  //   tags: "ram 1500 american polar destroyer polluter cruiser nolan"
-  // },
-  // {
-  //   title: "waze 2 get 2 skool", // 37 continue from here
-  //   desc: "don go skool",
-  //   image: "img/nolan-school.jpeg",
-  //   link: "Articles/article.html?article=25",
-  //   place: "items",
-  //   tags: "school beaverton school disctrict transport how to get to school nolan"
-  // },
-  // {
-  //   title: "how 2 evade taxes", // 38
-  //   desc: "serious",
-  //   image: "img/nolan-evade.jpeg",
-  //   link: "Articles/article.html?article=26",
-  //   place: "items",
-  //   tags: "how to evade taxes nolan"
-  // },
-  // {
-  //   title: "FORTNITE VICTORY R...", // 39
-  //   desc: "n0t clikbait",
-  //   image: "img/nolan-fortnite.jpeg",
-  //   link: "Articles/article.html?article=27",
-  //   place: "items",
-  //   tags: "youtube fortnite battle royale video game #1 victory royale nolan"
-  // },
-  // {
-  //   title: "how 2 get XTRA ritch", // 40
-  //   desc: "$$$$$$$$$$$$",
-  //   image: "img/nolan-ritch.jpeg",
-  //   link: "Articles/article.html?article=28",
-  //   place: "items",
-  //   tags: "how to get rich how to get extra rich nolan"
-  // },
-  // {
-  //   title: "earth lore", // 41
-  //   desc: "histor",
-  //   image: "img/nolan-earth-lore.webp",
-  //   link: "Articles/article.html?article=29",
-  //   place: "items",
-  //   tags: "planet earth lore milky way galaxy human nolan"
-  // },
-  // {
-  //   title: "scartch", // 42
-  //   desc: "coding lang",
-  //   image: "img/nolan-scratch.jpeg",
-  //   link: "Articles/article.html?article=30",
-  //   place: "items",
-  //   tags: "scratch.mit.edu coding language man nolan"
-  // },
-  // {
-  //   title: "ButterDog CFO", // 43
-  //   desc: "(2023)",
-  //   image: "img/nolan-butterdog-cfo.jpeg",
-  //   link: "Articles/article.html?article=31",
-  //   place: "items",
-  //   tags: "butterdogco cfo chief financial officer nolan"
-  // },
-  // {
-  //   title: "Drogco", // 44
-  //   desc: "dogrog",
-  //   image: "img/nolan-drogco.png",
-  //   link: "Articles/article.html?article=32",
-  //   place: "items",
-  //   tags: "butterdogco drogco company bankruptcy poor nolan"
-  // },
-  // {
-  //   title: "Mountainside High School", // 45
-  //   desc: "Beaverton OR",
-  //   image: "img/kai-mountainside.jpeg",
-  //   link: "Articles/article.html?article=33",
-  //   place: "items",
-  //   tags: "beaverton school district mhs southridge high school kai"
-  // },
-  // {
-  //   title: "How Baby's are Made", // 46
-  //   desc: "KIDS NO READ",
-  //   image: "img/nolan-stork.jpeg",
-  //   link: "Articles/article.html?article=34",
-  //   place: "items",
-  //   tags: "stork child sex naked female naked women nude woman dick cock missionary doggystyle cum squirt ejaculate white stuff nolan"
-  // },
-  // {
-  //   title: "How to commit crimes", // 47
-  //   desc: "steal stuff",
-  //   image: "img/nolan-crimes.jpg",
-  //   link: "Articles/article.html?article=35",
-  //   place: "items",
-  //   tags: "gun death pew pew kids nolan"
-  // },
-  // {
-  //   title: "how eficianly comit war crim", // 48
-  //   desc: "eficin criem",
-  //   image: "img/war-crimes.jpeg",
-  //   link: "Articles/article.html?article=36",
-  //   place: "items",
-    //   tags: "how to commit war crimes criminal missile bomb explode death keegan offical article"
-  // }
+  }
 ];
 
 let done = false;
@@ -422,8 +134,10 @@ function getResponseCount() {
   fetch(url)
     .then(response => response.json())
     .then(data => {
-      const responseCount = data.values.length - 1; // Subtract 1 to exclude header row
-      return responseCount;
+      if (data) {
+        const responseCount = data.values.length - 1; // Subtract 1 to exclude header row
+        return responseCount;
+      }
     })
     .catch(error => console.error(error));
 }
@@ -438,9 +152,11 @@ function getResponseData() {
   fetch(url)
     .then(response => response.json())
     .then(dat => {
-      const responseData = formatResponseData(dat);
-      data.push(...responseData);
-      done = true;
+      if (dat) {
+        const responseData = formatResponseData(dat);
+        data.push(...responseData);
+        done = true;
+      }
     })
     .catch(error => console.error(error));
 }
@@ -452,20 +168,20 @@ function formatResponseData(dat) {
   for (let i = 1; i < dat.values.length; i++) {
     const response = dat.values[i];
     const responseNumber = i + 1; // Add 1 to align with 1-based index
-    
+
     try { // Fix the image URL so it can be displayed
       if (response[5].toString().includes('../') === true) {
-       imageURL = response[5];
+        imageURL = response[5];
       } else {
         const imageId = response[5].toString().replace('https://drive.google.com/open?id=', '');
-        const newImageUrl = `https://drive.google.com/uc?export=view&id=${imageId}`;
+        const newImageUrl = `https://drive.usercontent.google.com/download?id=${imageId}&export=view&authuser=0`;
         imageURL = newImageUrl;
       }
     }
     catch (err) {
       console.error(err);
     }
-    
+
     if (response[8] != "no") {
       const item = {
         title: response[3], // Column D
@@ -475,7 +191,7 @@ function formatResponseData(dat) {
         place: "items", // Fixed value as "items"
         tags: response[2] + response[1] // Column B, & Column C (email & name)
       };
-  
+
       formattedData.push(item);
     }
   }
@@ -484,9 +200,6 @@ function formatResponseData(dat) {
 }
 
 getResponseData();
-
-// alert(JSON.stringify(data);
-
 
 // A = date made
 // B = email
