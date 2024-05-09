@@ -80,7 +80,7 @@
 
               if (linkPattern.test(valStr)) {
                 const imageId = valStr.replace('https://drive.google.com/open?id=', '');
-                const newImageUrl = `https://drive.google.com/uc?export=view&id=${imageId}`;
+                const newImageUrl = `https://drive.usercontent.google.com/download?id=${imageId}&export=view&authuser=0`;
                 document.getElementById(id).src = newImageUrl;
               } else {
                 // If it's not a specific Google Drive link, assign val as the image source
