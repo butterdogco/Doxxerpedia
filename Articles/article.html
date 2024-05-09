@@ -80,7 +80,7 @@
 
               if (linkPattern.test(valStr)) {
                 const imageId = valStr.replace('https://drive.google.com/open?id=', '');
-                const newImageUrl = `https://drive.usercontent.google.com/download?id=${imageId}&export=view&authuser=0`;
+                const newImageUrl = `https://drive.google.com/thumbnail?id=${imageId}`;
                 document.getElementById(id).src = newImageUrl;
               } else {
                 // If it's not a specific Google Drive link, assign val as the image source
@@ -122,7 +122,7 @@
           } else if (mode === "approved") {
             if (val.toString() === 'no') {
               window.location.href = "../Articles/article.html?article=1";
-              alert("This article has be removed by a moderator.")
+              alert("this article has been removed by a moderator.")
             }
           }
 
