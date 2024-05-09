@@ -463,7 +463,7 @@ function formatResponseData(dat) {
       }
     }
     catch (err) {
-      alert(err);
+      console.error(err);
     }
     
     if (response[8] != "no") {

@@ -22,7 +22,7 @@ async function createDefaults() {
       load(item.title, item.desc, item.image, item.link, "recomend");
     });
   } catch (error) {
-    alert(error);
+    console.error(error);
   }
 }
 

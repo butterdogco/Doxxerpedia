@@ -42,7 +42,7 @@ async function backgroundImage() {
     setInterval(changeBackgroundImage, 3000); // Set interval to cycle through the images every 3 seconds
 
   } catch (error) {
-    alert(error);
+    console.error(error);
   }
 }
 
