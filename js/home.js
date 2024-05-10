@@ -29,8 +29,8 @@ try {
   console.error(err);
 }
   
-  hding.innerText = head;
-  p.innerText = text;
+  hding.innerHTML = head;
+  p.innerHTML = text;
   
   if (e === null) {
     e = "items";

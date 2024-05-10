@@ -24,7 +24,7 @@
     </div>
     <br>
     <hr>
-    <h2 class="all" onclick="load('no don click me','why did you click that','img/wikabedia.png','#','items');">all article</h2>
+    <h2 class="all" onclick="load('no don click me','why did you click that','img/wikabedia.png','#','items');">lates article</h2>
     <div class="items" id="items">
 
       <!--
@@ -94,6 +94,10 @@
         if(done === true) {
           document.getElementById('loadDiv').style.opacity = 0;
           window.setTimeout(function() {
+            const parent = document.getElementById("items");
+            const arr = Array.from(parent.childNodes);
+            arr.reverse();
+            parent.append(...arr);
             document.getElementById('loadDiv').remove();
           }, 200);
         } else {
