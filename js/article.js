@@ -95,3 +95,11 @@ function search2(key) {
     search("page2");
   }
 }
+
+async function asjustSize() {
+  const height = document.getElementById("articleTitle").offsetHeight;
+  const element = document.getElementById("articleText");
+  element.style.marginTop = `calc(-70vh + ${height}px)`;
+}
+
+window.onresize = asjustSize;
