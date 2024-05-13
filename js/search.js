@@ -6,15 +6,29 @@ function sleep(milliseconds) {
   } while (currentDate - date < milliseconds);
 }
 
+function updateQueryStringParameter(uri, key, value) {
+  var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
+  var separator = uri.indexOf('?') !== -1 ? "&" : "?";
+  if (uri.match(re)) {
+    return uri.replace(re, '$1' + key + "=" + value + '$2');
+  }
+  else {
+    return uri + separator + key + "=" + value;
+  }
+}
+
 function load(head,text,image,url,e) {
-  web = "site('" + url + "')"
+  web = "site('" + url + "')";
   const div = document.createElement('div');
   const img = document.createElement('img');
   const hding = document.createElement('h3');
   const p = document.createElement('p');
   div.setAttribute('class','item');
-  div.setAttribute('onclick',web)
-  img.setAttribute('src',image)
+  div.setAttribute('onclick',web);
+  if (image.includes("../")) {
+    image = image.replace("../", "");
+  }
+  img.setAttribute('src',image);
   hding.innerHTML = head;
   p.innerHTML = text;
   
@@ -26,7 +40,7 @@ function load(head,text,image,url,e) {
     url == "#";
   }
   
-  document.getElementById(e).appendChild(div)
+  document.getElementById(e).appendChild(div);
   div.appendChild(img);
   div.appendChild(hding);
   div.appendChild(p);
@@ -35,7 +49,7 @@ function load(head,text,image,url,e) {
 function site(url) {
   document.body.style.opacity = 0;
   setTimeout(function() {
-  window.location.href = url
+  window.location.href = url;
   },250);
 }
 
@@ -55,11 +69,11 @@ async function search(mode) {
     window.location.href = "?search=" + searchQuery;
   } else if (mode === "page2") {
     searchQuery = document.getElementById('searchBox2').value;
-    window.location.href = "?search=" + searchQuery;
+    url.searchParams.set("search", searchQuery);
   }
   
-  if (searchQuery === undefined) {
-    searchQuery = ' ';
+  if (!searchQuery) {
+    searchQuery = '';
   }
 
   // Define the array of ignored words
@@ -68,7 +82,7 @@ async function search(mode) {
   // Perform the search operation if a search query exists
   if (searchQuery) {
     document.getElementById('queryText').innerHTML = ''.concat("saerched 4 '", searchQuery, "'");
-    document.getElementById('searchBox2').value = searchQuery
+    document.getElementById('searchBox2').value = searchQuery;
 
     var exactMatches = [];
     var partialMatches = [];
@@ -76,7 +90,7 @@ async function search(mode) {
     // Use the search query to perform a search or any other operations
     // For example, search through a list of items
     while (!done) {
-      await new Promise(resolve => setTimeout(resolve, 150)); // Wait for 100 milliseconds
+      await new Promise(resolve => setTimeout(resolve, 150));
     }
     
     data.forEach(item => {
@@ -84,7 +98,7 @@ async function search(mode) {
       var found = false;
       
       ignoredWords.forEach((element) => {
-        if (!found) {
+        if (!found && item.title && item.desc && item.tags) {
           if (searchQuery === (element) || searchQuery === "how to") {
             found = true;
             match = words.some(word => (item.title.includes(word) || item.desc.includes(word) || item.tags.includes(word)));
@@ -107,7 +121,8 @@ async function search(mode) {
     // Concatenate the arrays and load the results into the searchItemsElement
     var results = exactMatches.concat(partialMatches);
     results.forEach(item => {
-      load(item.title, item.desc, item.image, item.link, "searchItems");
+      var img = item.image;
+      load(item.title, item.desc, img, item.link, "searchItems");
     });
 
     if (document.getElementById('searchItems').hasChildNodes() === false && results.length === 0) {
