@@ -58,7 +58,6 @@
         })
         .catch(error => {
           console.error(error);
-          // Display an error message to the user
         });
     }
 
@@ -91,9 +90,9 @@
             }
           } else if (mode === "title") {
             if (val === undefined) {
-              document.getElementById(id).innerText = "tis article no exist i tink";
+              document.getElementById(id).innerHTML = "tis article no exist i tink";
             } else {
-              document.getElementById(id).innerText = val;
+              document.getElementById(id).innerHTML = val;
             }
           } else if (mode === "text") {
             if (val === undefined) {
@@ -103,9 +102,9 @@
             }
           } else if (mode === "writer") {
             if (val === undefined) {
-              document.getElementById(id).innerText = ''.concat("article by ", "your mother");
+              document.getElementById(id).innerHTML = ''.concat("article by ", "your mother");
             } else {
-              document.getElementById(id).innerText = ''.concat("article by ", val);
+              document.getElementById(id).innerHTML = ''.concat("article by ", val);
             }
           } else if (mode === "pageTitle") {
             if (val === undefined) {
@@ -115,9 +114,9 @@
             }
           } else if (mode === "dateMade") {
             if (val === undefined) {
-              document.getElementById(id).innerText = 'created tomorrow';
+              document.getElementById(id).innerHTML = 'created tomorrow';
             } else {
-              document.getElementById(id).innerText = 'created ' + val;
+              document.getElementById(id).innerHTML = 'created ' + val;
             }
           } else if (mode === "approved") {
             if (val.toString() === 'no') {
