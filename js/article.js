@@ -96,10 +96,11 @@ function search2(key) {
   }
 }
 
-async function asjustSize() {
+async function adjustSize() {
   const height = document.getElementById("articleTitle").offsetHeight;
   const element = document.getElementById("articleText");
   element.style.marginTop = `calc(-70vh + ${height}px)`;
 }
 
-window.onresize = asjustSize;
+window.onresize = adjustSize;
+adjustSize();
