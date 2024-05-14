@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title id="pageTitle">creator - wikabedia</title>
+  <link rel="shortcut icon" href="https://github.com/butterdogco/Wikabedia/blob/main/img/wikabedia.png?raw=true">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/creator.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <img src="img/wikabedia.png" class="logo" onclick="site('index.html')">
+  <img src="img/back.png" class="logo2" onclick="site('index.html')">
+  <h1 class="logoText">wikabedia</h1>
+  <br>
+  <div class="article">
+    <div class="articleImage">
+      <img src="img/wikabedia.png" id="articleImg">
+    </div>
+    <h1 class="articleTitle" id="articleTitle" contenteditable="true" onkeypress="return (this.innerText.length <= 73)" onpaste="return false" max="73">title</h1>
+    <pre class="articleText" id="articleText" contenteditable="true">article text</pre>
+    <p class="articleWriter" id="articleWriter">article by you</p>
+    <p class="articleWriter" id="articleDate">created now</p>
+  </div>
+
+  <script src="js/creator.js"></script>
+</body>
+
+</html>

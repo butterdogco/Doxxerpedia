@@ -1,22 +1,20 @@
+var currentTheme = "light";
+var root = document.querySelector(":root");
+
 function theme(mode) {
-  var selColor = "light";
   const b = document.body.style;
 
   if (mode === "dark") {
-    selColor = "dark";
+    currentTheme = "dark";
+    root.style.setProperty('--background1', 'var(--backgrounddark1)');
+    root.style.setProperty('--text1', 'var(--textdark1)');
   } else if (mode === "light") {
-    selColor = "light";
+    currentTheme = "light";
+    root.style.setProperty('--background1', 'var(--backgroundlight1)');
+    root.style.setProperty('--text1', 'var(--textlight1)');
   }
-  const darkBG = "rgb(20,20,50)";
-  const dark1 = "rgb(60,60,100)";
-  const dark2 = "rgb(70,70,110)";
-  const darkText = "rgb(255,255,255)";
-  
-  b.color = darkText;
-  b.backgroundColor = darkBG;
-  // document.getElementById('item').style.backgroundColor = dark1;
 }
 
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    // theme("dark");
+  // theme("dark");
 }
