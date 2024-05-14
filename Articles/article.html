@@ -121,7 +121,7 @@
           } else if (mode === "approved") {
             if (val.toString() === 'no') {
               window.location.href = "../Articles/article.html?article=1";
-              alert("this article has been removed by a moderator.");
+              alert("this article has been removed by a moderator");
             }
           }
 
@@ -129,13 +129,13 @@
         });
     }
 
+    sheetData("I" + articleNum, "", "approved");
     sheetData("G" + articleNum, "articleTitle", "title");
     sheetData("H" + articleNum, "articleText", "text");
     sheetData("F" + articleNum, "articleImg", "image");
     sheetData("C" + articleNum, "articleWriter", "writer");
     sheetData("G" + articleNum, "", "pageTitle");
     sheetData("A" + articleNum, "articleDate", "dateMade");
-    sheetData("I" + articleNum, "", "approved");
 
     function checkLoad() {
       if (document.getElementById('articleTitle').innerHTML != "loading" == false) {
