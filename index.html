@@ -68,7 +68,7 @@
     <script>
       function createDefaults() {
         if (done === false) {
-          setTimeout(createDefaults,500);
+          setTimeout(createDefaults,100);
         } else {
           try {
             for (var item of data) {
@@ -93,15 +93,13 @@
       function checkLoad() {
         if(done === true) {
           document.getElementById('loadDiv').style.opacity = 0;
-          window.setTimeout(function() {
-            const parent = document.getElementById("items");
-            const arr = Array.from(parent.childNodes);
-            arr.reverse();
-            parent.append(...arr);
-            document.getElementById('loadDiv').remove();
-          }, 200);
+          document.getElementById('loadDiv').remove();
+          const parent = document.getElementById("items");
+          const arr = Array.from(parent.childNodes);
+          arr.reverse();
+          parent.append(...arr);
         } else {
-          setTimeout(checkLoad,500);
+          setTimeout(checkLoad,150);
         }
       }
       
