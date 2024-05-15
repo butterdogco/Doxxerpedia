@@ -11,6 +11,7 @@
     cursor: default;
     font-weight: 400px;
     cursor: default;
+    color: var(--text1);
   }
   
   .logoText {
@@ -26,11 +27,12 @@
     font-size: 3vh;
     font-weight: bold;
     cursor: default;
+    color: var(--text1);
   }
   
   
   hr {
-    border: 0.1vh solid rgb(230,230,230);
+    border: 0.1vh solid var(--background2);
     /*margin-top: 85vh;*/
     width: 100vw;
     height: 0vh;
@@ -41,9 +43,9 @@
     height: 4vh;
     margin-left: 2vh;
     margin-top: 2vh;
-    filter: brightness(95%);
+    filter: brightness(95%) var(--imagefilter);
     border-radius: 100vh;
-    background: white;
+    background: var(--background4);
     padding: 2vh;
     cursor: pointer;
     animation: fadeIn3 4s ease-in-out;
@@ -59,9 +61,9 @@
     height: 4vh;
     margin-left: -8.5vh;
     margin-top: 2vh;
-    filter: brightness(95%);
+    filter: brightness(95%) var(--imagefilter);
     border-radius: 100vh;
-    background: white;
+    background: var(--background4);
     padding: 2vh;
     cursor: pointer;
     position: static;
@@ -84,7 +86,7 @@
   }
   
   .logoDesc, .logoText, .recomend {
-    cursor: default
+    cursor: default;
   }
   
   .logoDesc {
@@ -125,6 +127,7 @@
     top: 15vh;
     left: 50%;
     transform: translateX(-50%);
+    color: var(--text1);
   }
   
   .articleImage img {
@@ -139,6 +142,7 @@
     min-height: 70vh;
     z-index: 1;
     margin-top: -40%;
+    color: var(--text1);
   }
   
   #pageName {
@@ -165,86 +169,6 @@
     text-align: center;
   }
   
-  .search {
-    padding: 2vh;
-    border-radius: 5vh;
-    border: none;
-    outline: none;
-    font-weight: bold;
-    width: 2.5vh;
-    height: 2.5vh;
-    position: fixed;
-    top: 0;
-    right: 0;
-    margin: 2vh;
-    background: rgb(240,240,240);
-    overflow-x: hidden;
-    transition: 0.3s ease;
-    box-shadow: 0px 0px 2vh rgba(0,0,0,0.075);
-  }
-  
-  .search:hover {
-    width: 20vh;
-  }
-  
-  .search:hover input {
-    opacity: 1;
-  }
-  
-  .search input {
-    width: 15vh;
-    height: 2.5vh;
-    margin-top: -1vh;
-    margin-left: -.75vh;
-    position: fixed;
-    padding: 1vh;
-    border-radius: 4vh;
-    outline: none;
-    border: none;
-    opacity: 0;
-    transition: 0.3s ease;
-  }
-  
-  .search img {
-    width: 2.5vh;
-    height: 2.5vh;
-    float: right;
-    cursor: pointer;
-  }
-  
-  .loading {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    width: 100vw;
-    height: 100vh;
-    background: white;
-    transition: 0.2s ease;
-  }
-  
-  .loading-icon {
-    width: 5vh;
-    height: 5vh;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-  }
-  
-  .loading-spinner {
-    border: 16px solid #f3f3f3; /* Background */
-    border-top: 16px solid rgba(0,0,0,0.5); /* Bar color */
-    border-radius: 50%;
-    width: 10vh;
-    height: 10vh;
-    animation: spin 1s linear infinite;
-    position: fixed;
-    top: calc(50% - 6.75vh);
-    left: calc(50% - 6.75vh);
-    transform: translate(-50%,-50%);
-  }
-  
   .alert {
     background: rgba(255,255,255,0.6);
     width: 100vw;
@@ -264,3 +188,4 @@
     transform: translate(-50%,-50%);
     width: 100vw;
   }
+  

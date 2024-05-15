@@ -7,13 +7,13 @@ function sleep(milliseconds) {
 }
 
 function load(head,text,image,url,e) {
-  web = "site('" + url + "')";
+  web = `site('${url}')`;
   const div = document.createElement('div');
   const img = document.createElement('img');
   const hding = document.createElement('h3');
   const p = document.createElement('p');
-  div.setAttribute('class','item');
-  div.setAttribute('onclick',web);
+  div.setAttribute('class', 'item');
+  div.setAttribute('onclick', web);
   
 try {
   var string = image.toString();
@@ -40,7 +40,7 @@ try {
     url == "#";
   }
   
-  document.getElementById(e).appendChild(div)
+  document.getElementById(e).appendChild(div);
   div.appendChild(img);
   div.appendChild(hding);
   div.appendChild(p);
@@ -49,8 +49,8 @@ try {
 function site(url) {
   document.body.style.opacity = 0;
   setTimeout(function() {
-  window.location.href = url
-  },250)
+  window.location.href = url;
+  },250);
 }
 
 function search() {
@@ -58,8 +58,8 @@ function search() {
   if (url !== undefined) {
     document.body.style.opacity = 0;
     setTimeout(function() {
-    window.location.href = url
-    },250)
+    window.location.href = url;
+    },250);
   }
 }
 

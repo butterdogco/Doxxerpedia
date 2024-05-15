@@ -11,6 +11,7 @@
     margin-top: -7vh;
     font-size: 4vh;
     margin-left: 12vh;
+    color: var(--text1);
   }
   
   h2 {
@@ -34,14 +35,16 @@
     height: 4vh;
     margin-left: 2vh;
     margin-top: 2vh;
-    filter: brightness(95%);
+    filter: brightness(95%) var(--imagefilter);
     border-radius: 100vh;
-    background: var(--background2);
+    background: var(--background4);
     padding: 2vh;
     cursor: pointer;
     animation: fadeIn3 4s ease-in-out;
     animation-iteration-count: 9999999;
     animation-direction: reverse;
+    z-index: 5;
+    position: relative;
   }
   
   .logo2 {
@@ -50,9 +53,9 @@
     height: 4vh;
     margin-left: -8.5vh;
     margin-top: 2vh;
-    filter: brightness(95%);
+    filter: brightness(95%) var(--imagefilter);
     border-radius: 100vh;
-    background: var(--background2);
+    background: var(--background4);
     padding: 2vh;
     cursor: pointer;
     position: static;
@@ -60,6 +63,8 @@
     transition: 0.2s ease;
     animation: fadeIn2 4s ease-in-out;
     animation-iteration-count: 999999;
+    z-index: 6;
+    position: relative;
   }
   
   .logo:hover ~ .logo2, .logo2:hover {
@@ -131,53 +136,6 @@
     color: rgb(130,130,130);
   }
   
-  .search {
-    padding: 2vh;
-    border-radius: 5vh;
-    border: none;
-    outline: none;
-    font-weight: bold;
-    width: 2.5vh;
-    height: 2.5vh;
-    position: fixed;
-    top: 0;
-    right: 0;
-    margin: 2vh;
-    background: var(--background2);
-    overflow-x: hidden;
-    transition: 0.3s ease;
-    box-shadow: 0px 0px 2vh rgba(0,0,0,0.075);
-  }
-  
-  .search:hover, #searchBox:focus ~ .search {
-    width: 20vh;
-  }
-  
-  .search:hover input {
-    opacity: 1;
-  }
-  
-  .search input {
-    width: 15vh;
-    height: 2.5vh;
-    margin-top: -1vh;
-    margin-left: -.75vh;
-    position: fixed;
-    padding: 1vh;
-    border-radius: 4vh;
-    outline: none;
-    border: none;
-    opacity: 0;
-    transition: 0.3s ease;
-  }
-  
-  .search img {
-    width: 2.5vh;
-    height: 2.5vh;
-    float: right;
-    cursor: pointer;
-  }
-  
   #loadingImage {
     height: 30vh;
     width: 30vh;
@@ -189,13 +147,12 @@
   
   .search2 .icon {
     padding: 1vh;
-    border-radius: 4vh;
     border: none;
     outline: none;
     font-weight: bold;
     width: 2.5vh;
     height: 2.5vh;
-    background: var(--background2);
+    background: var(--background4);
     overflow-x: hidden;
     transition: 0.3s ease;
     display: inline-flex;
@@ -203,6 +160,8 @@
     margin-left: 2vh;
     cursor: pointer;
     box-shadow: 0px 0px 2vh rgba(0,0,0,0.05);
+    filter: var(--imagefilter);
+    border-radius: 50%;
   }
   
   #searchBox2 {
@@ -216,6 +175,7 @@
     transition: 0.3s ease;
     background: var(--background2);
     box-shadow: 0px 0px 2vh rgba(0,0,0,0.05);
+    color: var(--text1);
   }
   
   #searchBox2:focus {

@@ -6,7 +6,8 @@
     font-size: 4vh;
     margin-bottom: 2vh;
     font-weight: 400px;
-    text-shadow: 0px 0px 2vh rgba(0,0,0,0.2);
+    text-shadow: 0 0 2vh rgba(0,0,0,0.2);
+    color: var(--text1);
   }
   
   h2 {
@@ -18,11 +19,12 @@
     z-index: 2;
     position: relative;
     text-shadow: 0px 0px 2vh rgba(0,0,0,0.2);
+    color: var(--text1);
   }
   
   
   hr {
-    border: 0.1vh solid rgb(230,230,230);
+    border: 0.1vh solid var(--background2);
     margin: 0;
     width: 100vw;
     height: 0vh;
@@ -37,11 +39,11 @@
     transform: translateX(-50%);
     margin-left: 50%;
     margin-top: 2vh;
-    filter: brightness(95%);
+    filter: brightness(95%) var(--imagefilter);
     border-radius: 100vh;
-    background: white;
+    background: var(--background4);
     padding: 2vh;
-    box-shadow: 0px 0px 2vh rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 2vh var(--shadow1);
   }
   
   .logo2 {
@@ -77,143 +79,6 @@
     background: none;
   }
   
-  .loading {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    width: 100vw;
-    height: 100vh;
-    background: white;
-    transition: 0.2s ease;
-  }
-  
-  .loading-icon {
-    width: 5vh;
-    height: 5vh;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-  }
-  
-  .loading-spinner {
-    border: 16px solid #f3f3f3; /* Background */
-    border-top: 16px solid rgba(0,0,0,0.5); /* Bar color */
-    border-radius: 50%;
-    width: 10vh;
-    height: 10vh;
-    animation: spin 1s linear infinite;
-    position: fixed;
-    top: calc(50% - 6.75vh);
-    left: calc(50% - 6.75vh);
-    transform: translate(-50%,-50%);
-  }
-  
-  footer {
-    text-align: center;
-    margin-top: 2vh;
-  }
-  
-  footer a {
-    padding: 1vh;
-    width: 4vh;
-    height: 2vh;
-    background: rgb(230,230,230);
-    border-radius: 1.25vh;
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-    transition: 0.2s ease;
-  }
-  
-  footer a:hover {
-    filter: brightness(95%);
-    box-shadow: 0px 0px 2vh rgba(0,0,0,0.1);
-  }
-  
-  footer .not-a-button {
-    background: none !important;
-    cursor: default;
-  }
-  
-  footer .not-a-button:hover {
-    box-shadow: none;
-  }
-  
-  .search {
-    padding: 2vh;
-    border-radius: 5vh;
-    border: none;
-    outline: none;
-    font-weight: bold;
-    width: 2.5vh;
-    height: 2.5vh;
-    position: fixed;
-    top: 0;
-    right: 0;
-    margin: 2vh;
-    background: rgb(240,240,240);
-    /*overflow-x: hidden;*/
-    transition: 0.3s ease;
-    z-index: 2;
-    box-shadow: 0px 0px 2vh rgba(0,0,0,0.075);
-  }
-  
-  .search:hover {
-    width: 20vh;
-  }
-  
-  .search input:focus ~ .search {
-    background: white;
-  }
-  
-  #searchBoxautocomplete-list {
-    opacity: 0;
-    transition: 0.2s ease;
-    background: rgb(240,240,240);
-    padding: 2vh;
-    border-radius: 2vh;
-    margin-left: -2vh;
-    z-index: 1;
-    box-shadow: 0px 0px 2vh rgba(0,0,0,0.075);
-  }
-  
-  .search:hover #searchBoxautocomplete-list {
-    opacity: 1;
-  }
-  
-  .search:hover input {
-    opacity: 1;
-  }
-  
-  .search input {
-    width: 15vh;
-    height: 2.5vh;
-    margin-top: -1vh;
-    margin-left: -.75vh;
-    position: fixed;
-    padding: 1vh;
-    border-radius: 4vh;
-    outline: none;
-    border: none;
-    opacity: 0;
-    transition: 0.3s ease;
-  }
-  
-  .search img {
-    width: 2.5vh;
-    height: 2.5vh;
-    float: right;
-    cursor: pointer;
-  }
-  
-  .search div {
-    position: relative;
-    width: 20vh;
-    margin-top: 2vh;
-  }
-  
   ul {
     list-style-type: none;
     margin-top: -3px;
@@ -236,7 +101,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 20%, rgba(255,255,255,0.6206524846266632) 100%);
+    background: linear-gradient(0deg, var(--background1) 0%, var(--background1) 20%, var(--hometopgradient) 100%);
     pointer-events: none;
     z-index: 0;
   }
@@ -251,5 +116,3 @@
     transition: 1s ease;
     z-index: 0;
   }
-  
-  /* make a buyakid.com wikabedia article */

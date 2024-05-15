@@ -3,7 +3,7 @@
 
 <head>
   <title id="pageTitle">loading - wikabedia</title>
-  <link rel="shortcut icon" href="https://github.com/butterdogco/Wikabedia/blob/main/img/wikabedia.png?raw=true">
+  <link rel="shortcut icon" href="img/wikabedia icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -35,8 +35,16 @@
     <div class="loading-spinner"></div>
   </div>
 
+  <footer>
+    <a class="not-a-button">copyirigt wikabedia 2024</a>
+    <a href="https://forms.gle/b74LRxjEW1LjT2aP8">maek an article 4 FRE!</a>
+    <a href="#" onclick="theme()" id="themeToggle">dark moed</a>
+  </footer>
+
   <script src="../js/articlesDir.js"></script>
   <script src="../js/article.js"></script>
+  <script src="../js/theme.js"></script>
+  <script src="../js/autocomplete.js"></script>
   <script>
     var url = new URL(window.location);
     var articleNum = url.searchParams.get("article");

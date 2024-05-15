@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>saerch - wikabedia</title>
-    <link rel="shortcut icon" href="https://github.com/butterdogco/Wikabedia/blob/main/img/wikabedia.png?raw=true">
+    <link rel="shortcut icon" href="img/wikabedia icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -49,6 +49,8 @@
       
     <script src="js/articlesDir.js"></script>
     <script src="js/search.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/autocomplete.js"></script>
     <script>
       
       function checkLoad() {
@@ -58,7 +60,7 @@
             document.getElementById('loadDiv').remove();
           }, 200);
         } else {
-          setTimeout(checkLoad,500);
+          setTimeout(checkLoad,150);
         }
       }
       
