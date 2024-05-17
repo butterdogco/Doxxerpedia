@@ -137,7 +137,7 @@ async function search(mode) {
   }
 }
 
-function search2(key) {
+function search2(event) {
   if (event.key === "Enter") {
     search("page2");
   }
