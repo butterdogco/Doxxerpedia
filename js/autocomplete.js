@@ -26,7 +26,7 @@ function autocomplete(inp, arr) {
     /*for each item in the array...*/
     for (i = 0; i < arr.length; i++) {
       
-      if (arr.title) {
+      if (arr[i].title) {
         /*check if the item starts with the same letters as the text field value:*/
         var ok = arr[i].title.toUpperCase();
         if (ok.includes(val.toUpperCase())) {
@@ -130,4 +130,6 @@ function autocomplete(inp, arr) {
   });
 }
 
-autocomplete(document.getElementById("searchBox"), data);
+setTimeout(function() {
+  autocomplete(document.getElementById("searchBox"), data);
+}, 400);
