@@ -7,18 +7,17 @@ function sleep(milliseconds) {
 }
 
 function load(head,text,image,url,e) {
+  console.log(image);
   web = `site('${url}')`;
   const div = document.createElement('div');
   const img = document.createElement('img');
   const hding = document.createElement('h3');
   const p = document.createElement('p');
-  div.setAttribute('class', 'item');
+  div.className = "item";
   div.setAttribute('onclick', web);
   
   try {
-    var string = image.toString();
-
-    if (string.includes("../")) {
+    if (image.includes("../")) {
       const mod = string.replace('../','');
       img.setAttribute('src', mod);
     } else {
