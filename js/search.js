@@ -101,16 +101,15 @@ async function search(mode) {
         if (!found && item.title && item.desc && item.tags) {
           if (searchQuery === (element) || searchQuery === "how to") {
             found = true;
-            match = words.some(word => (item.title.includes(word) || item.desc.includes(word) || item.tags.includes(word)));
-            
+            match = words.some(word => (item.title.toLowerCase().includes(word.toLowerCase()) || item.desc.toLowerCase().includes(word.toLowerCase()) || item.tags.toLowerCase().includes(word.toLowerCase())));
           } else {
-            match = words.some(word => !ignoredWords.includes(word) && (item.title.includes(word) || item.desc.includes(word) || item.tags.includes(word)));
+            match = words.some(word => !ignoredWords.includes(word.toLowerCase()) && (item.title.toLowerCase().includes(word.toLowerCase()) || item.desc.toLowerCase().includes(word.toLowerCase()) || item.tags.toLowerCase().includes(word.toLowerCase())));
           }
         }
       });
       
       if (match) {
-        if (item.title.includes(searchQuery) || item.desc.includes(searchQuery) || item.tags.includes(searchQuery)) {
+        if (item.title.toLowerCase().includes(searchQuery.toLowerCase()) || item.desc.toLowerCase().includes(searchQuery.toLowerCase()) || item.tags.toLowerCase().includes(searchQuery.toLowerCase())) {
           exactMatches.push(item);
         } else {
           partialMatches.push(item);
@@ -152,12 +151,12 @@ var focused = false
 
 document.getElementById("searchBox").addEventListener("onfocus", function() {
   document.getElementById('searchDiv').style.width = "20vh";
-  focused = true
+  focused = true;
 });
 
 document.getElementById("searchBox").addEventListener("onfocusout", function() {
   document.getElementById('searchDiv').style.width = "20vh";
-  focused = false
+  focused = false;
 });
 
 document.getElementById("search").addEventListener("mouseover", function() {
@@ -167,7 +166,7 @@ document.getElementById("search").addEventListener("mouseover", function() {
 document.getElementById("search").addEventListener("mouseout", function() {
   if (focused === true) {
     document.getElementById('searchDiv').style.width = "20vh";
-  } else {
+  } else if (!document.getElementById("searchBox").hasFocus() && document.getElementById("searchBox").value === "") {
     document.getElementById('searchDiv').style.width = "2.5vh";
   }
 });
