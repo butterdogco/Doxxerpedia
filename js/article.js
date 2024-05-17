@@ -76,8 +76,11 @@ function createSearch() {
     const d = document.createElement("div");
     d.className = "editButton";
     d.id = "editButton";
-    d.title = "edit";
     document.body.appendChild(d);
+    
+    const p = document.createElement("p");
+    p.innerText = "edit";
+    d.appendChild(p);
     
     const i = document.createElement('img');
     i.setAttribute('src','../img/edit.png');
