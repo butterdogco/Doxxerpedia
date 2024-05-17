@@ -17,11 +17,10 @@ function load(head,text,image,url,e) {
   
   try {
     var string = image.toString();
-    var pattern = /\.\.\//i;
-    
-    if (string.match(pattern)) {
-      const e = string.replace('../','');
-      img.setAttribute('src', e);
+
+    if (string.includes("../")) {
+      const mod = string.replace('../','');
+      img.setAttribute('src', mod);
     } else {
       img.setAttribute('src', image);
     }

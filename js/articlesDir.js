@@ -151,11 +151,10 @@ function getResponseCount() {
 }
 
 function getResponseData() {
-  const spreadsheetId = "1LlL8mrSXTTV6qHOkUKd57oVb0uZATq037Wg4ltlDreg"; // Replace with your Google Sheets ID
-  const sheetName = "Form Responses 2"; // Replace with your sheet name
-  const apiKey = "AIzaSyBie4PasgrxYkF7LRl8zcCGUsnBnwZ8pWE"; // Replace with your API key
-
-  const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${sheetName}?key=${apiKey}`;
+  const spreadsheetId = "1LlL8mrSXTTV6qHOkUKd57oVb0uZATq037Wg4ltlDreg";
+  const sheetName = "Form Responses 2";
+  const sheetId = "AIzaSyBie4PasgrxYkF7LRl8zcCGUsnBnwZ8pWE";
+  const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${sheetName}?key=${sheetId}`;
 
   fetch(url)
     .then(response => response.json())
@@ -176,28 +175,33 @@ function formatResponseData(dat) {
   for (let i = 1; i < dat.values.length; i++) {
     const response = dat.values[i];
     const responseNumber = i + 1; // Add 1 to align with 1-based index
+    var imageURL = "../img/wikabedia%20icon.png";
 
-    try { // Fix the image URL so it can be displayed
-      if (response[5].toString().includes('../') === true) {
-        imageURL = response[5];
-      } else {
-        const imageId = response[5].toString().replace('https://drive.google.com/open?id=', '');
-        const newImageUrl = `https://drive.google.com/thumbnail?id=${imageId}`;
-        imageURL = newImageUrl;
+    if (response[5]) {
+      try { // Fix the image URL so it can be displayed
+        if (response[5].toString().includes('../') === true) {
+          imageURL = response[5];
+        } else if(response[5].toString().includes('https://drive.google.com')) {
+          const imageId = response[5].toString().replace('https://drive.google.com/open?id=', '');
+          const newImageUrl = `https://drive.google.com/thumbnail?id=${imageId}`;
+          imageURL = newImageUrl;
+        } else {
+          imageURL = response[5].toString();
+        }
+      }
+      catch (err) {
+        console.error(err);
       }
     }
-    catch (err) {
-      console.error(err);
-    }
 
-    if (response[8] != "no") {
+    if (response[1] && response[2] && response[3] && response[4] && response[8] && response[8] != "no") {
       const item = {
         title: response[3], // Column D
         desc: response[4], // Column E
         image: imageURL, // Column F
-        link: `Articles/article.html?article=${responseNumber}`, // Use responseNumber in URL
-        place: "items", // Fixed value as "items"
-        tags: response[2] + response[1] // Column B, & Column C (email & name)
+        link: `Articles/article.html?article=${responseNumber}`,
+        place: "items",
+        tags: response[2] + " " + response[1] // Column B, & Column C
       };
 
       formattedData.push(item);
