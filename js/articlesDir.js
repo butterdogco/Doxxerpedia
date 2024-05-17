@@ -119,6 +119,14 @@ let data = [
     link: "Articles/how-to-math-do.html",
     place: "items",
     tags: "how to do math algebra sin cos tan calculator maht meth keegan"
+  },
+  {
+    title: "formatting", // 12
+    desc: "artical",
+    image: "img/formatting.png",
+    link: "Articles/formatting.html",
+    place: "items",
+    tags: "how to do creator formatting articles google forms help keegan"
   }
 ];
 

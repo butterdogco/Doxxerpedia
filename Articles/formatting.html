@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>formatting - wikabedia</title>
+    <link rel="shortcut icon" href="../img/wikabedia%20icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/article.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <img src="https://github.com/butterdogco/Wikabedia/blob/main/img/wikabedia.png?raw=true" class="logo" onclick="site('../index.html')">
+    <img src="../img/back.png" class="logo2" onclick="site('../index.html')">
+    <h1 class="logoText">wikabedia</h1>
+    <br>
+    <div class="article">
+      <div class="articleImage">
+        <img src="../img/formatting.png">
+      </div>
+      <h1 class="articleTitle">formatting</h1>
+      <p class="articleText" style="transform: translateX(-50%); left: 50%;">
+        <b style="font-size: 25px;">how do make link</b><br>
+        1. get link<br>
+        2. tink of link name<br>
+        3. do tis ting: <b style="font-weight: normal;color: var(--textlink1);">(link text)[website]</b><br>
+        4. congrat finis insruction tutorial!!!<br>
+        <b style="font-size: 25px;">waht da article link how do</b><br>
+        1. get article numer and rember it (in wikabedia link)<br>
+        2. tink of link name<br>
+        3. do tis ting: <b style="font-weight: normal;color: var(--textlink1);">(link text)[Article/article number]</b><br>
+        4. finihsed leson todey!!!!<br>
+      </p>
+      <p class="articleWriter">article by keegan</p>
+    </div>
+    <hr>
+    <h2 class="recomend" onclick="load('no don click me','why did you click that','../img/wikabedia.png','#','recomend');">recomend articles</h2>
+    <div class="items" id="recomend">
+      
+      <!--
+      <div class="item" id="item" onclick="site('https://google.com')">
+        <img src="https://github.com/butterdogco/Wikabedia/blob/main/img/wikabedia.png?raw=true">
+        <h3>Name</h3>
+        <p>Short description</p>
+      </div>
+      -->
+      
+    </div>
+    
+    <script src="../js/articlesDir.js"></script>
+    <script src="../js/article.js"></script>
+    <script src="../js/theme.js"></script>
+    <script>
+      window.onerror = function(error) {
+        // do something clever here
+        alert("We've ran into a problem, please report the following text on the GitHub page: " + error); // do NOT do this for real!
+      };
+    </script>
+    <script src="../js/recomend.js"></script>
+  </body>
+</html>

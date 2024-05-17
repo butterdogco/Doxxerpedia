@@ -3,7 +3,7 @@
 
 <head>
   <title id="pageTitle">loading - wikabedia</title>
-  <link rel="shortcut icon" href="img/wikabedia icon.png">
+  <link rel="shortcut icon" href="../img/wikabedia%20icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -49,12 +49,12 @@
     var url = new URL(window.location);
     var articleNum = url.searchParams.get("article");
     var responseCount = 0;
-
+    
     function responseCountFunc() {
       const spreadsheetId = "1LlL8mrSXTTV6qHOkUKd57oVb0uZATq037Wg4ltlDreg";
       const sheetName = "Form Responses 2";
-      const apiKey = "AIzaSyBie4PasgrxYkF7LRl8zcCGUsnBnwZ8pWE";
-      const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${sheetName}?key=${apiKey}`;
+      const sheetId = "AIzaSyBie4PasgrxYkF7LRl8zcCGUsnBnwZ8pWE";
+      const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${sheetName}?key=${sheetId}`;
 
       fetch(url)
         .then(response => response.json())
@@ -69,9 +69,34 @@
         });
     }
 
-    // Call responseCountFunc to fetch data
     responseCountFunc();
-
+    
+    function processTags(text) {
+      var first = text.replaceAll("<", "&lt");
+      var second = first.replaceAll(">", "&gt");
+      return second;
+    }
+    
+    function processURLs(text) {
+      var regex = /\((.*?)\)\[(.*?)\]/g;;
+      var final = text.replace(regex, function(match, linkText, url) {
+        var link = url.trim();
+        var articleRegex = /Article\/\d+$/;
+        if (link.toString().match(articleRegex)) {
+          var id = link.split("/")[1];
+          link = `../Articles/article.html?article=${id}`;
+        }
+        return `<a href="${link}" title="${url.trim()}">${linkText.trim()}</a>`;
+      });
+      return final;
+    }
+    
+    function processText(text) {
+      var first = processTags(text);
+      var second = processURLs(first);
+      return second;
+    }
+    
     function sheetData(c1, id, mode) {
       const spreadsheetId = '1LlL8mrSXTTV6qHOkUKd57oVb0uZATq037Wg4ltlDreg';
       const range = 'Form Responses 2!' + c1;
@@ -106,7 +131,7 @@
             if (val === undefined) {
               document.getElementById(id).innerText = "i forgor the text";
             } else {
-              document.getElementById(id).innerText = val;
+              document.getElementById(id).innerHTML = processText(`${val}`);
             }
           } else if (mode === "writer") {
             if (val === undefined) {
@@ -147,7 +172,6 @@
 
     function checkLoad() {
       if (document.getElementById('articleTitle').innerHTML != "loading" == false) {
-        //if(document.getElementById('articleImg').src != "../img/wikabedia.png" == false) {
         window.setTimeout(checkLoad, 100);
       } else {
         document.getElementById('loadDiv').style.opacity = 0;

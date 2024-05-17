@@ -143,6 +143,11 @@
     z-index: 1;
     margin-top: -40%;
     color: var(--text1);
+    position: relative;
+    
+    a {
+      color: var(--textlink1);
+    }
   }
   
   #pageName {

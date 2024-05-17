@@ -40,6 +40,8 @@
     --text2: rgb(160, 160, 160);
     --text3: var(--textlight3);
     
+    --textlink1: rgb(120,120,240);
+    
     --shadow1: 0px 0px 2vh rgba(0,0,0,0.1);
     --shadow2: 0px 0px 2vh rgba(0,0,0,0.05);
     --shadow3: 0px 0px 2vh rgba(0,0,0,0.75);
