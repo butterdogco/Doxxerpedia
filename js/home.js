@@ -15,19 +15,19 @@ function load(head,text,image,url,e) {
   div.setAttribute('class', 'item');
   div.setAttribute('onclick', web);
   
-try {
-  var string = image.toString();
-  var pattern = /\.\.\//i;
-  
-  if (pattern.test(string)) {
-    const e = string.replace('../','');
-    img.setAttribute('src', e);
-  } else {
-    img.setAttribute('src', image);
+  try {
+    var string = image.toString();
+    var pattern = /\.\.\//i;
+    
+    if (string.match(pattern)) {
+      const e = string.replace('../','');
+      img.setAttribute('src', e);
+    } else {
+      img.setAttribute('src', image);
+    }
+  } catch (err) {
+    console.error(err);
   }
-} catch (err) {
-  console.error(err);
-}
   
   hding.innerHTML = head;
   p.innerHTML = text;
