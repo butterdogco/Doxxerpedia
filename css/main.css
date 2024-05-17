@@ -331,6 +331,7 @@ body {
     position: relative;
     float: right;
     margin-top: -18px;
+    filter: var(--imagefilter);
   }
   
   p {
@@ -341,6 +342,7 @@ body {
     margin-right: 5vh;
     opacity: 0;
     transition: 0.2s ease;
+    color: var(--text1);
   }
 }
 
