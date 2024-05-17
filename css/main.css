@@ -263,6 +263,10 @@ body {
   z-index: 1;
   box-shadow: 0 0 2vh var(--shadow3);
   color: var(--text1);
+
+  div {
+    cursor: pointer;
+  }
 }
 
 .search:hover #searchBoxautocomplete-list {
