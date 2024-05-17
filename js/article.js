@@ -59,7 +59,7 @@ function createSearch() {
   const i = document.createElement('img');
   i.setAttribute('src','../img/search.png');
   i.setAttribute('onclick','search("page2");');
-  d.appendChild(i)
+  d.appendChild(i);
   
   const t = document.createElement('input');
   t.setAttribute('type','text');
@@ -72,10 +72,18 @@ function createSearch() {
   };
   d.appendChild(t);
   
-  // const s = document.createElement('script');
-  // // s.setAttribute('src','../js/search.js');
-  // s.src = '../js/searchCorner.js';
-  // document.body.appendChild(s);
+  if (window.location.href.includes("article.html?article=")) {
+    const d = document.createElement("div");
+    d.className = "editButton";
+    d.id = "editButton";
+    d.title = "edit";
+    document.body.appendChild(d);
+    
+    const i = document.createElement('img');
+    i.setAttribute('src','../img/edit.png');
+    i.onclick = function() {alert("tis feature isn't available yet sory for inconveniance")};
+    d.appendChild(i);
+  }
 }
 
 createSearch();
