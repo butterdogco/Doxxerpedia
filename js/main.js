@@ -8,7 +8,11 @@ errorDiv.style.transform = "translate(-50%, -50%)";
 errorDiv.style.border = "2px solid gray";
 
 const notice = document.createElement("p")
-notice.innerText = "Debug Console | SHIFT + P to toggle";
+notice.innerText = "Debug Console | CTRL + Y to toggle";
+notice.style.paddingBottom = "5px";
+notice.style.paddingTop = "5px";
+notice.style.textAlign = "center";
+notice.style.borderBottom = "2px solid gray";
 
 errorDiv.appendChild(notice);
 document.body.appendChild(errorDiv);
@@ -30,8 +34,8 @@ window.onerror = function(msg, url, linenumber) {
     return true;
 }
 
-document.body.addEventListener("onkeydown", function(event) {
-    if (event.key === "P" && event.shiftKey === true) {
+document.body.addEventListener("onkeydown", (event) => {
+    if (event.keyCode === 89 && event.ctrlKey) {
         if (errorDiv.style.display === "block") {
             errorDiv.style.display = "none";
         } else {
