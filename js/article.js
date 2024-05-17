@@ -97,9 +97,15 @@ function search2(key) {
 }
 
 async function adjustSize() {
-  const height = document.getElementById("articleTitle").offsetHeight;
-  const element = document.getElementById("articleText");
-  element.style.marginTop = `calc(-70vh + ${height}px)`;
+  if (document.getElementById("articleTitle") && document.getElementById("articleText")) {
+    const height = document.getElementById("articleTitle").offsetHeight;
+    const element = document.getElementById("articleText");
+    element.style.marginTop = `calc(-70vh + ${height}px)`;
+  } else if (document.getElementsByClassName("articleTitle")[0] && document.getElementsByClassName("articleText")[0]) {
+    const height = document.getElementsByClassName("articleTitle")[0].offsetHeight;
+    const element = document.getElementsByClassName("articleText")[0];
+    element.style.marginTop = `calc(-70vh + ${height}px)`;
+  }
 }
 
 window.onresize = adjustSize;
