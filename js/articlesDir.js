@@ -132,24 +132,6 @@ let data = [
 
 let done = false;
 
-function getResponseCount() {
-  const spreadsheetId = "1LlL8mrSXTTV6qHOkUKd57oVb0uZATq037Wg4ltlDreg"; // Replace with your Google Sheets ID
-  const sheetName = "Form Responses 2"; // Replace with your sheet name
-  const apiKey = "AIzaSyBie4PasgrxYkF7LRl8zcCGUsnBnwZ8pWE"; // Replace with your API key
-
-  const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${sheetName}?key=${apiKey}`;
-
-  fetch(url)
-    .then(response => response.json())
-    .then(data => {
-      if (data) {
-        const responseCount = data.values.length - 1; // Subtract 1 to exclude header row
-        return responseCount;
-      }
-    })
-    .catch(error => console.error(error));
-}
-
 function getResponseData() {
   const spreadsheetId = "1LlL8mrSXTTV6qHOkUKd57oVb0uZATq037Wg4ltlDreg";
   const sheetName = "Form Responses 2";
@@ -175,7 +157,7 @@ function formatResponseData(dat) {
   for (let i = 1; i < dat.values.length; i++) {
     const response = dat.values[i];
     const responseNumber = i + 1; // Add 1 to align with 1-based index
-    var imageURL = "../img/wikabedia%20icon.png";
+    var imageURL = "img/wikabedia%20icon.png";
 
     if (response[5]) {
       try { // Fix the image URL so it can be displayed
@@ -197,7 +179,8 @@ function formatResponseData(dat) {
     if (response[1] && response[2] && response[3] && response[4] && response[8] && response[8] != "no") {
       console.log(response[3] + "\n" + response[4] + "\n" + response[5]);
       try {
-        createLog(response[5], "none", "none");
+        createLog("log", response[5], "none", "none");
+        response[5] = response[5].replace("../", "");
       } catch (err) {
 
       }

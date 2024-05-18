@@ -7,7 +7,10 @@ function sleep(milliseconds) {
 }
 
 function load(head,text,image,url,e) {
-  console.log(image);
+  try {
+    createLog("log", image, "none", "none");
+  } catch (err) {}
+
   web = `site('${url}')`;
   const div = document.createElement('div');
   const img = document.createElement('img');

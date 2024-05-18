@@ -15,7 +15,7 @@ function sleep(milliseconds) {
 function load(head,text,image,url,e) {
   web = "site('../" + url + "')";
   if (!image.toString().includes("../")) {
-    if (!image.toString().includes("https://drive.google.com")) {
+    if (!image.toString().includes("https://")) {
       image = "../" + image;
     }
   }

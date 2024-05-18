@@ -9,6 +9,7 @@ errorDiv.style.border = "2px solid gray";
 errorDiv.style.width = "90vw";
 errorDiv.style.height = "90vh";
 errorDiv.style.zIndex = "999999999999999999999999999999999999999999999999";
+errorDiv.style.overflowY = "scroll";
 
 const notice = document.createElement("p");
 notice.innerText = "Debug Console | CTRL + Y to toggle";
@@ -20,10 +21,15 @@ notice.style.borderBottom = "2px solid gray";
 errorDiv.appendChild(notice);
 document.body.appendChild(errorDiv);
 
-function createLog(msg, url, linenumber) {
+function createLog(type, msg, url, linenumber) {
   const e = document.createElement("p");
-  e.innerHTML = `Error: ${msg}<br>URL: ${url}<br>Line: ${linenumber}`;
-  e.style.background = "rgba(230,20,20,0.1)";
+  if (type != "error") {
+    e.innerHTML = `${msg}<br>URL: ${url}<br>Line: ${linenumber}`;
+    e.style.background = "rgba(20,20,20,0.1)";
+  } else {
+    e.innerHTML = `Error: ${msg}<br>URL: ${url}<br>Line: ${linenumber}`;
+    e.style.background = "rgba(230,20,20,0.1)";
+  }
   e.style.width = "100%";
   e.style.paddingBottom = "5px";
   e.style.paddingTop = "5px";
@@ -33,7 +39,7 @@ function createLog(msg, url, linenumber) {
 }
 
 window.onerror = function(msg, url, linenumber) {
-  createLog(msg, url, linenumber);
+  createLog("error", msg, url, linenumber);
   return true;
 };
 
