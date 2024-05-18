@@ -8,7 +8,7 @@ function sleep(milliseconds) {
 
 function load(head,text,image,url,e) {
   try {
-    createLog("log", image, "none", "none");
+    createLog("log", image);
   } catch (err) {}
 
   web = `site('${url}')`;

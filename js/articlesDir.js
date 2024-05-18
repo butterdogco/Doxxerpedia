@@ -132,7 +132,7 @@ let data = [
 
 let done = false;
 
-function getResponseData() {
+function getData() {
   const spreadsheetId = "1LlL8mrSXTTV6qHOkUKd57oVb0uZATq037Wg4ltlDreg";
   const sheetName = "Form Responses 2";
   const sheetId = "AIzaSyBie4PasgrxYkF7LRl8zcCGUsnBnwZ8pWE";
@@ -142,7 +142,7 @@ function getResponseData() {
     .then(response => response.json())
     .then(dat => {
       if (dat) {
-        const responseData = formatResponseData(dat);
+        const responseData = formatData(dat);
         data.push(...responseData);
         done = true;
       }
@@ -150,45 +150,51 @@ function getResponseData() {
     .catch(error => console.error(error));
 }
 
-function formatResponseData(dat) {
+function formatData(dat) {
   const formattedData = [];
+  var articleCount = 0;
 
-  // Assuming the responses start from the second row, skipping the header row
   for (let i = 1; i < dat.values.length; i++) {
     const response = dat.values[i];
-    const responseNumber = i + 1; // Add 1 to align with 1-based index
+    const responseNumber = i + 1; // add 1 to ignore header
     var imageURL = "img/wikabedia%20icon.png";
 
-    if (response[5]) {
-      try { // Fix the image URL so it can be displayed
-        if (response[5].toString().includes('../') === true) {
-          imageURL = response[5].replace("../", "");
-        } else if(response[5].toString().includes('https://drive.google.com')) {
+    if (response) {
+      var image = response[5] || imageURL;
+      if (image.includes("https://")) {
+        // is a web url
+        if (image.inculdes("drive.google.com")) {
+          // is google drive
           const imageId = response[5].toString().replace('https://drive.google.com/open?id=', '');
           const newImageUrl = `https://drive.google.com/thumbnail?id=${imageId}`;
-          imageURL = newImageUrl;
+          image = newImageUrl;
         } else {
-          imageURL = response[5].toString();
+          // is a regular web url
+          image = image;
         }
+      } else {
+        // is a local url so remove ../
+        image = image.replace(/\.\.\//i, "");
       }
-      catch (err) {
-        console.error(err);
-      }
-    }
 
-    if (response[1] && response[2] && response[3] && response[4] && response[8] && response[8] != "no") {
-      console.log(response[3] + "\n" + response[4] + "\n" + response[5]);
+      // increase the article count
+      if (responseNumber > articleCount) {
+        articleCount = responseNumber;
+      }
+
+      // log the image url for debugging
       try {
-        createLog("log", response[5], "none", "none");
-        response[5] = response[5].replace("../", "");
+        createLog("log", image);
+        image = image.replace("../", "");
       } catch (err) {
-
+        createLog("error", image, "none", "image.replace - articlesDir.js");
+        console.error(err);
       }
 
       const item = {
         title: response[3], // Column D
         desc: response[4], // Column E
-        image: imageURL, // Column F
+        image: image, // Column F
         link: `Articles/article.html?article=${responseNumber}`,
         place: "items",
         tags: response[2] + " " + response[1] // Column B, & Column C
@@ -201,7 +207,7 @@ function formatResponseData(dat) {
   return formattedData;
 }
 
-getResponseData();
+getData();
 
 // A = date made
 // B = email
