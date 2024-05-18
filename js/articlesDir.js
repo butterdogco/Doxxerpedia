@@ -163,7 +163,7 @@ function formatData(dat) {
       var image = response[5] || imageURL;
       if (image.includes("https://")) {
         // is a web url
-        if (image.inculdes("drive.google.com")) {
+        if (image.includes("drive.google.com")) {
           // is google drive
           const imageId = response[5].toString().replace('https://drive.google.com/open?id=', '');
           const newImageUrl = `https://drive.google.com/thumbnail?id=${imageId}`;
