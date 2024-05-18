@@ -180,7 +180,7 @@ function formatResponseData(dat) {
     if (response[5]) {
       try { // Fix the image URL so it can be displayed
         if (response[5].toString().includes('../') === true) {
-          imageURL = response[5];
+          imageURL = response[5].replace("../", "");
         } else if(response[5].toString().includes('https://drive.google.com')) {
           const imageId = response[5].toString().replace('https://drive.google.com/open?id=', '');
           const newImageUrl = `https://drive.google.com/thumbnail?id=${imageId}`;
@@ -195,6 +195,13 @@ function formatResponseData(dat) {
     }
 
     if (response[1] && response[2] && response[3] && response[4] && response[8] && response[8] != "no") {
+      console.log(response[3] + "\n" + response[4] + "\n" + response[5]);
+      try {
+        createLog(response[5], "none", "none");
+      } catch (err) {
+
+      }
+
       const item = {
         title: response[3], // Column D
         desc: response[4], // Column E
