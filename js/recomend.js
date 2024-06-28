@@ -1,26 +1,26 @@
 async function createDefaults() {
   try {
     while (!done) {
-      await new Promise(resolve => setTimeout(resolve, 150)); // Wait for 100 milliseconds
+      await new Promise(resolve => setTimeout(resolve, 150)); // Wait
     }
     
-     // Shuffle the data array
+     // Shuffle the data
     const shuffledData = data.slice();
     for (let i = shuffledData.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [shuffledData[i], shuffledData[j]] = [shuffledData[j], shuffledData[i]];
     }
     
-    // Get the first 5 items from the shuffled array
     const randomItems = shuffledData.slice(0, 5);
   
-    // Call the load function for each of the random items
     randomItems.forEach(item => {
-      if (item.desc === null) {
-        item.desc = "no descwiption";
-      }
-      if (item.title && item.desc && item.image && item.link) {
-        load(item.title, item.desc, item.image, item.link, "recomend");
+      if (item.approved === "yes") {
+        if (item.desc === null) {
+          item.desc = "no descwiption";
+        }
+        if (item.title && item.desc && item.image && item.link) {
+          load(item.title, item.desc, item.image, item.link, "recomend");
+        }
       }
     });
   } catch (error) {
