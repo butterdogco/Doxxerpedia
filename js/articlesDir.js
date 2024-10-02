@@ -58,7 +58,7 @@ function formatData(dat) {
 
   for (let i = 1; i < dat.values.length; i++) {
     const response = dat.values[i];
-    const responseNumber = i;// + 1; // add 1 to ignore header
+    const responseNumber = i + 1; // add 1 to ignore header
     var imageURL = "img/wikabedia%20icon.png";
 
     if (response) {

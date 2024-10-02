@@ -1,4 +1,4 @@
-var currentTheme = "light";
+var currentTheme = "dark";
 var root = document.querySelector(":root");
 
 function theme(mode) {
@@ -52,3 +52,5 @@ if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').match
 if (localStorage.getItem("theme")) {
   theme(localStorage.getItem("theme"));
 }
+
+theme("dark");
