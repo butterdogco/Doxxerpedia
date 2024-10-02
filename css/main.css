@@ -4,31 +4,31 @@
 /* Variables */
 :root {
     /* Light Versions */
-    --backgroundlight1: white;
-    --backgroundlight2: rgb(240, 240, 240);
-    --backgroundlight3: rgb(230, 230, 230);
+    --backgroundlight1: rgb(0, 255, 0);
+    --backgroundlight2: rgb(0, 220, 0);
+    --backgroundlight3: rgb(0, 180, 0);
     --imagefilterlight: invert(0%);
-    --hometopgradientlight: rgba(255,255,255,0.6206524846266632);
+    --hometopgradientlight: rgba(72, 255, 0, 0.621);
     --spinnercolorlight1: rgba(0,0,0,0.5);
     
     /* Dark Versions */
-    --backgrounddark1: rgb(20,20,40);
-    --backgrounddark2: rgb(40,40,50);
-    --backgrounddark3: rgb(140,140,140);
-    --logobackground: white;
+    --backgrounddark1: rgb(0, 0, 0);
+    --backgrounddark2: rgb(0,80,0);
+    --backgrounddark3: rgb(0,150,0);
+    --logobackground: lime;
     --imagefilterdark: invert(100%);
-    --hometopgradientdark: rgba(40,40,50,0.6206524846266632);
+    --hometopgradientdark: rgba(68, 255, 0, 0.621);
     --spinnercolordark1: rgba(0,0,30,0.5);
   
     --textlight1: black;
-    --textlight3: rgb(110,110,110);
-    --textdark1: white;
-    --textdark3: rgb(160,160,160);
+    --textlight3: rgb(100,200,100);
+    --textdark1: rgb(120,255,120);
+    --textdark3: rgb(180,255,180);
     
     --background1: var(--backgroundlight1);
-    --background2: rgb(240, 240, 240);
+    --background2: rgb(202, 255, 167);
     --background3: var(--backgroundlight3);
-    --background4: #f3f3f3;
+    --background4: #5dd439;
     
     --spinnercolor1: rgba(0,0,0,0.5);
     

@@ -2,8 +2,8 @@
 <html>
 
 <head>
-  <title id="pageTitle">loading - wikabedia</title>
-  <link rel="shortcut icon" href="../img/wikabedia%20icon.png">
+  <title id="pageTitle">loading - doxxerpedia</title>
+  <link rel="shortcut icon" href="../img/logo.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -12,13 +12,13 @@
 </head>
 
 <body>
-  <img src="../img/wikabedia.png" class="logo" onclick="site('../index.html')">
+  <img src="../img/logo.webp" class="logo" onclick="site('../index.html')">
   <img src="../img/back.png" class="logo2" onclick="site('../index.html')">
-  <h1 class="logoText">wikabedia</h1>
+  <h1 class="logoText">doxxerpedia</h1>
   <br>
   <div class="article">
     <div class="articleImage">
-      <img src="../img/wikabedia.png" id="articleImg">
+      <img src="../img/logo.webp" id="articleImg">
     </div>
     <h1 class="articleTitle" id="articleTitle">loading</h1>
     <pre class="articleText" id="articleText">if you see this text your internet is a hot pile of garbage</pre>
@@ -27,17 +27,16 @@
   </div>
   <hr>
   <h2 class="recomend"
-    onclick="load('no don click me','why did you click that','../img/wikabedia.png','#','recomend');">recomend articles
+    onclick="load('no don click me','why did you click that','../img/doxxerpedia.png','#','recomend');">recomend articles
   </h2>
   <div class="items" id="recomend"></div>
   <div class="loading" id="loadDiv">
-    <img src="../img/wikabedia.png" class="loading-icon">
+    <img src="../img/logo.webp" class="loading-icon">
     <div class="loading-spinner"></div>
   </div>
 
   <footer>
-    <a class="not-a-button">copyirigt wikabedia 2024</a>
-    <a href="https://forms.gle/b74LRxjEW1LjT2aP8">maek an article 4 FRE!</a>
+    <a class="not-a-button">copyirigt doxxerpedia 2024</a>
     <a href="#" onclick="theme()" id="themeToggle">dark moed</a>
   </footer>
 
@@ -53,7 +52,7 @@
     
     function responseCountFunc() {
       const spreadsheetId = "1LlL8mrSXTTV6qHOkUKd57oVb0uZATq037Wg4ltlDreg";
-      const sheetName = "Form Responses 2";
+      const sheetName = "doxxerpedia";
       const sheetId = "AIzaSyBie4PasgrxYkF7LRl8zcCGUsnBnwZ8pWE";
       const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${sheetName}?key=${sheetId}`;
 
@@ -100,7 +99,7 @@
     
     function sheetData(c1, id, mode) {
       const spreadsheetId = '1LlL8mrSXTTV6qHOkUKd57oVb0uZATq037Wg4ltlDreg';
-      const range = 'Form Responses 2!' + c1;
+      const range = 'doxxerpedia!' + c1;
 
       fetch(`https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${range}?key=AIzaSyBie4PasgrxYkF7LRl8zcCGUsnBnwZ8pWE`)
         .then(response => response.json())
@@ -142,9 +141,9 @@
             }
           } else if (mode === "pageTitle") {
             if (val === undefined) {
-              document.title = "nothing - wikabedia";
+              document.title = "nothing - doxxerpedia";
             } else {
-              document.title = val + " - wikabedia";
+              document.title = val + " - doxxerpedia";
             }
           } else if (mode === "dateMade") {
             if (val === undefined) {
