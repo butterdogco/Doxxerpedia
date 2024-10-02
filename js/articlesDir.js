@@ -36,7 +36,7 @@ let done = false;
 
 function getData() {
   const spreadsheetId = "1LlL8mrSXTTV6qHOkUKd57oVb0uZATq037Wg4ltlDreg";
-  const sheetName = "Doxxerpedia";
+  const sheetName = "doxxerpedia";
   const sheetId = "AIzaSyBie4PasgrxYkF7LRl8zcCGUsnBnwZ8pWE";
   const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${sheetName}?key=${sheetId}`;
 
